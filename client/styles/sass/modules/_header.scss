@@ -1,0 +1,9 @@
+// Header demo styles
+// ---------------------------------------
+.global-header {
+  // background-color: $backgroundColour;
+  font-size: 0;
+  &__logo {
+    display: inline-block;
+  }
+}

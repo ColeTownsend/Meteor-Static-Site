@@ -1,0 +1,67 @@
+// Demo overrides.
+nav[role="navigation"] {
+  padding: 2rem 0;
+  @include breakpoint(break-1) {
+    width: 100%;
+  }
+  .left-link > a{
+    // float: left;
+    display: inline-block;
+    margin-left: -4px;
+  }
+  .right-link > a {
+    display: inline-block;
+    margin-left: -4px;
+    text-align: right;
+  }
+  .center-link {
+    text-align: center;
+    a {
+      min-width: 120px;
+    }
+  }
+  a {
+    font-family: unquote(map-get($bodytype, font-family));
+    font-style: normal;
+    font-weight: map-get($bodytype, regular);
+    @include fontsize(14, 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-bottom: 0.1rem solid darken($linkColour, 15%);
+    color: $linkColour;
+    cursor: pointer;
+    display: block;
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+    &:hover, &:active, &:focus {
+      background-color: $linkColour;
+      color: $white;
+    }
+    @include breakpoint(break-1) {
+      letter-spacing: 0.05rem;
+      padding: 1rem 0;
+      // @include fontsize(18, 1);
+      border: 0;
+      color: $linkColour;
+      padding: 0;
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: transparent;
+        color: darken($linkColour, 15%);
+      }
+    }
+    @include breakpoint(break-2) {
+      @include fontsize(16, 2);
+    }
+    @include breakpoint(break-3) {
+      @include fontsize(16, 3);
+    }
+    @include breakpoint(break-4) {
+      @include fontsize(16, 4);
+    }
+  }
+}

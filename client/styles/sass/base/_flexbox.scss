@@ -1,0 +1,28 @@
+@import "bourbon/bourbon";
+
+.flex-parent {
+  @include display(flex);
+  @include align-items(stretch); // Stretch children to fill parent
+
+  &.row {
+    @include flex-direction(row); // Row Layout
+  }
+  &.column {
+    @include flex-direction(column); // Column Layout
+  }
+  &.align-end {
+    @include justify-content(flex-end); // Bottom Align
+  }
+  &.fill-space {
+    @include justify-content(space-between);
+  }
+  .flex-child {
+    @include flex(none);
+    &.fill {
+      @include align-self(stretch);
+    }
+    &.end {
+      @include align-self(flex-end);
+    }
+  }
+}

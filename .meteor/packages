@@ -10,3 +10,5 @@ iron:router
 fourseven:scss
 wolves:bourbon
 wolves:neat
+jquery
+meteorhacks:fast-render

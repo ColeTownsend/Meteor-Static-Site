@@ -4,6 +4,20 @@
   @include clearfix();
 }
 
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.db {
+  display: block;
+}
+.dib {
+  display: inline-block;
+  margin-left: -4px;
+}
+
 .container {
   max-width: 940px;
   margin: 0 auto;

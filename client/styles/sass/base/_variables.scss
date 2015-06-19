@@ -1,4 +1,4 @@
-// SCSS variables
+  // SCSS variables
 // ---------------------------------------
 
 // Note: For the following Sass maps enter values as if they would be px units.
@@ -56,25 +56,32 @@ $gutterwidths: (
 // Add weight and style details too.
 // ! Set cap height to set to the baseline.
 $bodytype: (
-  font-family: 'Futura, serif',
-  regular: 300,
-  bold: 600,
+  font-family: 'Office Code Pro,Nitti Grotesk,Fortescue Pro, Calluna Sans,Futura, serif',
+  regular: 400,
+  bold: 700,
   italic: italic,
   cap-height: 0.66
 );
 
 $headingtype: (
-  font-family: 'GTSectraFineTrial-Regular,Futura, Avenir, sans-serif',
+  font-family: 'GT Walsheim Pro Trial,Nitti Grotesk,GT Walsheim Pro Trial, Helvetica, Avenir, sans-serif',
   regular: 400,
   bold: 600,
-  cap-height: 0.65
+  cap-height: 0.66
 );
 
 $monospacetype: (
-  font-family: 'Office Code Pro, monospace',
+  font-family: 'GT Pressura Mon o Trial,Nitti PX, monospace',
   regular: 400,
   cap-height: 0.68
 );
+
+// $smalltype: (
+//   font-family: 'Nitti PX,Calluna Sans, Gill Sans, serif',
+//   regular: 400,
+//   bold: 400,
+//   cap-height: 0.66
+// );
 
 // Here are some local fonts cap-height sizes to get you started:
 // Georgia: 0.66, Times / Times New Roman: 0.65, Palatino: 0.52
@@ -83,14 +90,35 @@ $monospacetype: (
 // Selection of Typekit fonts cap-height sizes:
 // Proxima Nova: 0.57, Museo Slab: 0.66, JAF Facit: 0.7, Brandon Grotesque: 0.65, Clavo: 0.7, Adelle: 0.66, FF Tisa Pro: 0.82, Jubilat: 0.66, Futura PT: 0.66, Chaparral Pro: 0.5, Minion Pro: 0.66, Myriad Pro: 0.66, Adobe Caslon Pro: 0.36
 
-// Text colours. British English.
-$headingColour: #2E2E2E;
-$bodyColour: #222222;
-$linkColour: #512BC6;
-$hoverColour: #0B348B;
-$captionColour: #BDC8CC;
+// Text colors. British English.
+$headingcolor: #2E2E2E;
+$bodycolor: #222222;
+$linkcolor: #402FD4;
+$hovercolor: #0B348B;
+$captioncolor: #BDC8CC;
 $white: #FFFFFF;
 
-// Background colours.
-$backgroundColour: #EDF9FD;
-$codeBackgroundColour: #263238;
+// accent colors
+$accentcolors: (
+  pink: #ff2078,
+  cyan: #EDF9FD,
+  indigo: #512BC6,
+  yellow: #FBF7E6,
+  navy: #162237,
+  salmon: #EC9AB5
+);
+
+$oppositecolors: (
+  pink: indigo,
+  cyan: yellow,
+  indigo: pink,
+  yellow: indigo,
+  navy: salmon,
+  salmon: navy
+);
+
+
+
+// Background colors.
+$backgroundcolor: $white;
+$codeBackgroundcolor: map-get($accentcolors, navy);

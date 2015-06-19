@@ -15,7 +15,6 @@ body {
   font-style: normal;
   font-weight: map-get($bodytype, regular);
   line-height: 2rem;
-
   @include fontsize(zeta, all);
 }
 
@@ -27,34 +26,44 @@ a {
   -o-transition: color .1s, background-color .1s;
   transition: color .1s, background-color .1s;
 
-  color: $linkColour;
+  color: $linkcolor;
   text-decoration: none;
 
   &:hover, &:active, &:focus {
-    color: $hoverColour;
+    color: map-get($accentcolors, map-get($oppositecolors, indigo));
     text-decoration: none;
   }
 }
+
+// utility classes
+.headerfont {
+  font-family: unquote(map-get($headingtype, font-family));
+}
+.bodyfont {
+  font-family: unquote(map-get($bodytype, font-family));
+}
+
+
 
 // Styles for typeset text.
 .typeset {
 
   // Nice underlines for text links.
   p a, li a {
-    background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
-    background-image: -moz-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
-    background-image: -o-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
+    background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkcolor,20%) 50%);
+    background-image: -moz-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkcolor,20%) 50%);
+    background-image: -o-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkcolor,20%) 50%);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($linkcolor,20%) 50%);
     background-position: 0 93%;
     background-repeat: repeat-x;
     background-size: 100% 0.15rem;
-    text-shadow: 0.1rem 0 $backgroundColour,0.15rem 0 $backgroundColour,-0.1rem 0 $backgroundColour,-0.15rem 0 $backgroundColour;
+    text-shadow: 0.1rem 0 $backgroundcolor,0.15rem 0 $backgroundcolor,-0.1rem 0 $backgroundcolor,-0.15rem 0 $backgroundcolor;
 
     &:hover, &:active, &:focus {
-      background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,20%) 50%);
-      background-image: -moz-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,20%) 50%);
-      background-image: -o-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,20%) 50%);
-      background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,20%) 50%);
+      background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,20%) 50%);
+      background-image: -moz-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,20%) 50%);
+      background-image: -o-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,20%) 50%);
+      background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,20%) 50%);
     }
   }
 
@@ -77,7 +86,7 @@ a {
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
 
-    color: $headingColour;
+    color: $headingcolor;
     font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
     font-weight: map-get($headingtype, bold);
@@ -130,6 +139,12 @@ a {
         margin-left: 0;
       }
     }
+    &.unstyled {
+      list-style: none;
+      li {
+        list-style-type: none;
+      }
+    }
   }
 
   // Bold.
@@ -156,7 +171,7 @@ a {
   }
 
   .caption {
-    color: $captionColour;
+    color: $captioncolor;
 
     @include baseline(theta, $headingtype, 2, 2, all);
   }
@@ -174,7 +189,7 @@ a {
   blockquote {
 
     p {
-      border-left: 0.15rem solid $linkColour;
+      border-left: 0.15rem solid $linkcolor;
       font-style: map-get($bodytype, italic);
       padding-left: 1rem;
 
@@ -209,9 +224,9 @@ a {
 
   // Horizontal rule.
   hr {
-    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0, 0, 0, 0)),to($captionColour));
-    background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,$captionColour 50%);
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$captionColour 50%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0, 0, 0, 0)),to($captioncolor));
+    background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,$captioncolor 50%);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$captioncolor 50%);
     background-position: 0 50%;
     background-repeat: repeat-x;
     background-size: 100% 0.15rem;
@@ -223,8 +238,9 @@ a {
 
   // Code block.
   code, pre {
-    background-color: $codeBackgroundColour;
+    background-color: $codeBackgroundcolor;
     font-family: unquote(map-get($monospacetype, font-family));
+    color: map-get($accentcolors, yellow) !important;
   }
 
   pre {
@@ -239,7 +255,6 @@ a {
 
   code {
     line-height: 1rem;
-
     @include fontsize(theta, all);
   }
 

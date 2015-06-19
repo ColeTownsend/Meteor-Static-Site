@@ -4,6 +4,7 @@
 // Import Sassline base SCSS files in order so variables are read correctly.
 @import "base/reset";
 @import "base/variables";
+@import "base/colors";
 @import "base/modular-scale";
 @import "base/mixins";
 @import "base/typography";
@@ -17,6 +18,7 @@
 @import "modules/_footer";
 
 @import "page/home";
+@import "page/case-study";
 
 html {
   @include box-sizing(border-box);

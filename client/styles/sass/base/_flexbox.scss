@@ -18,11 +18,20 @@
   }
   .flex-child {
     @include flex(none);
+    &.one {
+      @include flex(1);
+    }
     &.fill {
       @include align-self(stretch);
     }
+    &.start {
+      @include align-self(start);
+    }
     &.end {
       @include align-self(flex-end);
+    }
+    &.center {
+      @include align-self(center);
     }
   }
 }

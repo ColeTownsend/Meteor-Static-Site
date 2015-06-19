@@ -1,48 +1,25 @@
-<template name="work">
-  <nav role="navigation">
-    <div class="container flex-parent fill-space">
-      <span class="left-link flex-child">
-        <a href="#">Journal</a>
-        <a href="#">About</a>
-      </span>
-      <span class="center-link flex-child">
-        <a onclick="Router.go('/')" class='btn btn-default btn-sm'>Back</a>
-      </span>
-      <span class="right-link flex-child">
-        <a href="#">Work</a>
-        <a href="#">Proposal</a>
-      </span>
-    </div>
-  </nav>
-  <div id='work'>
-    {{>Template.dynamic template=getTemplateName}}
+<template name="home">
+  <div class="wrapper yellow-bg">
+    {{> navHome}}
+    <main class="section typeset block-1">
+      <div class="cta clearfix">
+        <aside class="column column--right">
+          <h1 class="epsilon indigo">
+            Cole Townsend is a designer who wants to work with you. He has a penchant for thoughful solutions. He is currently <del>freelancing</del> sweating in the District. Luckily he is surviving and available for work. <a href="#">Let's make something.</a>
+          </h1>
+        </aside>
+      </div>
+      <section class="column column--duo">
+        <h2 class="epsilon indigo">Current and Past Projects</h2>
+        <ul class="work-list unstyled">
+          {{#each projects}}
+          <li><a href='/work/{{template}}'>{{title}}</a></li>
+          {{/each}}
+        </ul>
+      </section>
+    </main>
   </div>
 </template>
-<template name="home">
-  <nav role="navigation">
-    <div class="container flex-parent fill-space">
-      <span class="left-link flex-child">
-        <a href="#">Journal</a>
-        <a href="#">About</a>
-      </span>
-      <span class="center-link flex-child">
-        <a href="#">Twnsnd Co</a>
-      </span>
-      <span class="right-link flex-child">
-        <a href="#">Work</a>
-        <a href="#">Proposal</a>
-      </span>
-    </div>
-  </nav>
-  <div class="container typeset block-1">
-    <h1 class="beta cta">Cole Townsend is a designer who wants to work with you. He has a penchant for thoughful solutions. He is currently <del>freelancing</del> sweating in the District. <a href="#">Let's make something.</a></h1>
-    <div class="clearfix"></div>
-  </div>
-  <div class="container typeset">
-    <div id='home' class="work-list typeset">
-      {{#each posts}}
-      <div><a href='/work/{{template}}'>{{title}}</a></div>
-      {{/each}}
-    </div>
-  </div>
+<template name="work">
+  {{> navDefault}} {{>Template.dynamic template=getTemplateName}}
 </template>

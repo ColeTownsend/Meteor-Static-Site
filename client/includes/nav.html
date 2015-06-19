@@ -1,0 +1,35 @@
+<template name="navHome">
+  <nav role="navigation" class="yellow-bg section">
+    <div class="flex-parent fill-space">
+      <span class="left-link flex-child">
+        <a href="/journal/">Journal</a>
+        <a href="#">About</a>
+      </span>
+      <span class="center-link flex-child">
+        <a href="/">Twnsnd Co</a>
+      </span>
+      <span class="right-link flex-child">
+        <a href="/work/">Work</a>
+        <a href="/proposal/">Proposal</a>
+      </span>
+    </div>
+  </nav>
+</template>
+
+<template name="navDefault">
+  <nav role="navigation" class="section">
+    <div class="flex-parent fill-space">
+      <span class="left-link flex-child">
+        <a href="/journal/">Journal</a>
+        <a href="#">About</a>
+      </span>
+      <span class="center-link flex-child">
+        <a onclick="Router.go('/')">Back</a>
+      </span>
+      <span class="right-link flex-child">
+        <a href="/work/">Work</a>
+        <a href="/proposal/">Proposal</a>
+      </span>
+    </div>
+  </nav>
+</template>

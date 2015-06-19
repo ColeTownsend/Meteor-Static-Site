@@ -1,9 +1,38 @@
-// Header demo styles
-// ---------------------------------------
-.global-header {
-  // background-color: $backgroundColour;
-  font-size: 0;
-  &__logo {
-    display: inline-block;
+header {
+  position: relative;
+  height: 60vh;
+  max-height: 600px;
+  min-height: 300px;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  .hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+  .title {
+    color: $white;
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    // center it
+    margin-left: auto;
+    margin-right: auto;
+    @include align-self(center);
+    h1 {
+      font-size: 4rem;
+      color: $white;
+      font-family: "GT Walsheim Pro Trial";
+      font-weight: normal;
+    }
   }
 }

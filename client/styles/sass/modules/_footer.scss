@@ -4,7 +4,7 @@
 .global-footer {
 
   p {
-    color: $captionColour;
+    color: $captioncolor;
     font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
     font-weight: map-get($headingtype, regular);

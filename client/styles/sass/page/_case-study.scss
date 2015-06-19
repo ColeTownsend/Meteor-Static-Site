@@ -1,0 +1,15 @@
+.logo {
+  width: 3rem;
+  height: auto;
+  margin: 0 auto;
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 2rem;
+  &.panda {
+    width: 32px;
+  }
+}
+
+.title {
+  font-weight: bold;
+}

@@ -1,9 +1,47 @@
 .block-1 {
-  height: 50vh;
+  height: 60vh;
+  max-height: 800px;
 }
+
 .typeset .cta {
-  color: $linkColour;
-  padding-bottom: 1rem;
-  margin-top: 16vh;
-  font-weight: 100;
+  color: $linkcolor;
+  position: relative;
+  // width: 600px;
+  // margin-top: 12vh;
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+  h1 {
+    font-weight: normal;
+  }
+  a {
+    color: map-get($accentcolors, pink);
+    &:hover, &:focus, &:active {
+      color: map-get($accentcolors, map-get($oppositecolors, pink));
+    }
+  }
+}
+
+.block-1 {
+  h2 {
+    font-weight: normal;
+  }
+  .work-list a {
+    font-family: "GT Walsheim Pro Trial";
+    font-style: normal;
+    font-weight: map-get($bodytype, regular);
+    line-height: 2rem;
+    @include fontsize(zeta, all);
+  }
+}
+
+.dark-mode {
+  background: map-get($accentcolors, navy);
+  nav a, a {
+    $yellow: map-get($accentcolors, yellow);
+    color: $yellow !important;
+  }
+  .cta {
+    color: map-get($accentcolors, salmon) !important;
+  }
 }

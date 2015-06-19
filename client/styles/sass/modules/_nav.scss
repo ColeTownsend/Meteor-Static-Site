@@ -1,57 +1,71 @@
-// Demo overrides.
 nav[role="navigation"] {
   padding: 2rem 0;
+  position: relative;
+  @include breakpoint(break-3) {
+    padding-left: map-get($gutterwidths, medium);
+    padding-right: map-get($gutterwidths, medium);
+  }
   @include breakpoint(break-1) {
     width: 100%;
   }
-  .left-link > a{
-    // float: left;
+  .left-link > a {
     display: inline-block;
-    margin-left: -4px;
   }
-  .right-link > a {
-    display: inline-block;
-    margin-left: -4px;
+  .right-link {
     text-align: right;
+    a {
+      text-align: right;
+      display: inline-block;
+      margin-left: -6px;
+    }
   }
   .center-link {
     text-align: center;
+    flex-basis: 120px !important;
     a {
-      min-width: 120px;
+      width: 120px;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  &.yellow-bg {
+    a {
+      color: $linkcolor;
+      &:hover, &:focus, &:active {
+        color: map-get($accentcolors, map-get($oppositecolors, indigo));
+      }
     }
   }
   a {
-    font-family: unquote(map-get($bodytype, font-family));
+    font-family: unquote(map-get($monospacetype, font-family));
     font-style: normal;
-    font-weight: map-get($bodytype, regular);
+    font-weight: map-get($monospacetype, regular);
     @include fontsize(14, 0);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    border-bottom: 0.1rem solid darken($linkColour, 15%);
-    color: $linkColour;
+    color: $bodycolor;
     cursor: pointer;
     display: block;
     &:not(:last-of-type) {
       margin-right: 1rem;
     }
-    &:hover, &:active, &:focus {
-      background-color: $linkColour;
-      color: $white;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $linkcolor;
     }
     @include breakpoint(break-1) {
       letter-spacing: 0.05rem;
       padding: 1rem 0;
       // @include fontsize(18, 1);
       border: 0;
-      color: $linkColour;
       padding: 0;
-      &:hover,
-      &:active,
-      &:focus {
+      &:hover, &:active, &:focus {
         background-color: transparent;
-        color: darken($linkColour, 15%);
+        color: darken($linkcolor, 15%);
       }
     }
     @include breakpoint(break-2) {

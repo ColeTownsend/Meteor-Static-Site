@@ -1,5 +1,5 @@
-WorkList = [ {
-  title: 'Panda Jobs',
+PostList = [ {
+  title: 'Other Stuff',
   client: 'Panda Network',
   info: 'A tie is an alarm from the right perspective. They were lost without the scirrhous tyvek that composed their panther. A torose eyeliner\'s wheel comes with it the thought that the riteless crack is a brown.',
   template: "panda-jobs"
@@ -7,7 +7,7 @@ WorkList = [ {
   title: 'Startup Book List',
   client: 'Panda Network',
   info: 'A tie is an alarm from the right perspective. They were lost without the scirrhous tyvek that composed their panther. A torose eyeliner\'s wheel comes with it the thought that the riteless crack is a brown.',
-  template: "startup-book-list"
+  template: "introducing-fast-render"
 }, {
   title: 'Startup Launch List',
   client: 'Panda Network',

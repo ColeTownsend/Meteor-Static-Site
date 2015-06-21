@@ -28,11 +28,11 @@ $rootsizes: (
 // ! Make sure to have as many widths as breakpoints above.
 // Note: this was 'maxwidths' in previous versions.
 $measures: (
-  measure-0: 500,  // 500px wide
-  measure-1: 550,  // 550px wide
-  measure-2: 600,  // 600px wide
-  measure-3: 680,  // 680px wide
-  measure-4: 750   // 750px wide
+  measure-0: 480,  // 500px wide
+  measure-1: 520,  // 550px wide
+  measure-2: 580,  // 600px wide
+  measure-3: 660,  // 680px wide
+  measure-4: 740   // 750px wide
 );
 
 // Set the max-widths for containers (based on design).
@@ -41,7 +41,7 @@ $maxwidths: (
   width-0: 500,  // 500px wide
   width-1: 600,  // 600px wide
   width-2: 800,  // 800px wide
-  width-3: 1100, // 110px wide
+  width-3: 940,  // 940px wide
   width-4: 1300  // 1300px wide
 );
 
@@ -56,22 +56,22 @@ $gutterwidths: (
 // Add weight and style details too.
 // ! Set cap height to set to the baseline.
 $bodytype: (
-  font-family: 'Office Code Pro,Nitti Grotesk,Fortescue Pro, Calluna Sans,Futura, serif',
+  font-family: 'Nitti Grotesk, Myriad Pro, Arial, sans-serif',
   regular: 400,
-  bold: 700,
+  bold: 600,
   italic: italic,
   cap-height: 0.66
 );
 
 $headingtype: (
-  font-family: 'GT Walsheim Pro Trial,Nitti Grotesk,GT Walsheim Pro Trial, Helvetica, Avenir, sans-serif',
+  font-family: 'Nitti Grotesk, Myriad Pro, Arial, sans-serif',
   regular: 400,
-  bold: 600,
+  bold: 400,
   cap-height: 0.66
 );
 
 $monospacetype: (
-  font-family: 'GT Pressura Mon o Trial,Nitti PX, monospace',
+  font-family: 'Nitti PX, monospace',
   regular: 400,
   cap-height: 0.68
 );
@@ -89,14 +89,6 @@ $monospacetype: (
 
 // Selection of Typekit fonts cap-height sizes:
 // Proxima Nova: 0.57, Museo Slab: 0.66, JAF Facit: 0.7, Brandon Grotesque: 0.65, Clavo: 0.7, Adelle: 0.66, FF Tisa Pro: 0.82, Jubilat: 0.66, Futura PT: 0.66, Chaparral Pro: 0.5, Minion Pro: 0.66, Myriad Pro: 0.66, Adobe Caslon Pro: 0.36
-
-// Text colors. British English.
-$headingcolor: #2E2E2E;
-$bodycolor: #222222;
-$linkcolor: #402FD4;
-$hovercolor: #0B348B;
-$captioncolor: #BDC8CC;
-$white: #FFFFFF;
 
 // accent colors
 $accentcolors: (
@@ -117,8 +109,14 @@ $oppositecolors: (
   salmon: navy
 );
 
-
+// Text colors. British English.
+$headingcolor: map-get($accentcolors, navy);
+$bodycolor: map-get($accentcolors, navy);
+$linkcolor: map-get($accentcolors, indigo);
+$hovercolor: map-get($accentcolors, salmon);
+$captioncolor: map-get($accentcolors, salmon);
+$white: #FFFFFF;
 
 // Background colors.
-$backgroundcolor: $white;
+$backgroundcolor: $white; //map-get($accentcolors, cyan);
 $codeBackgroundcolor: map-get($accentcolors, navy);

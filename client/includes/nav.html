@@ -1,34 +1,16 @@
-<template name="navHome">
-  <nav role="navigation" class="yellow-bg section">
-    <div class="flex-parent fill-space">
-      <span class="left-link flex-child">
-        <a href="/journal/">Journal</a>
-        <a href="#">About</a>
-      </span>
-      <span class="center-link flex-child">
-        <a href="/">Twnsnd Co</a>
-      </span>
-      <span class="right-link flex-child">
-        <a href="/work/">Work</a>
-        <a href="/proposal/">Proposal</a>
-      </span>
-    </div>
-  </nav>
-</template>
-
 <template name="navDefault">
-  <nav role="navigation" class="section">
+  <nav role="navigation" class="section no-padv">
     <div class="flex-parent fill-space">
       <span class="left-link flex-child">
-        <a href="/journal/">Journal</a>
-        <a href="#">About</a>
+        <a href="{{ pathFor 'journal' }}">Journal</a>
+        <a href="{{ pathFor 'about' }}">About</a>
       </span>
       <span class="center-link flex-child">
-        <a onclick="Router.go('/')">Back</a>
+        <a href="{{ pathFor 'home' }}">Twnsnd Co</a>
       </span>
       <span class="right-link flex-child">
-        <a href="/work/">Work</a>
-        <a href="/proposal/">Proposal</a>
+        <a href="{{ pathFor 'work' }}">Work</a>
+        <a href="{{ pathFor 'proposal' }}">Proposal</a>
       </span>
     </div>
   </nav>

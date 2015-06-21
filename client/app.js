@@ -1,5 +1,12 @@
 if ( Meteor.isClient ) {
-  Template.work.helpers( {
+  Template.caseStudy.helpers( {
+    getTemplateName: function() {
+      var slug = Router.current().params.slug;
+      return slug;
+    }
+  } );
+
+  Template.journalPost.helpers( {
     getTemplateName: function() {
       var slug = Router.current().params.slug;
       return slug;
@@ -12,41 +19,53 @@ if ( Meteor.isClient ) {
     }
   } );
 
+  Template.work.helpers( {
+    projects: function() {
+      return WorkList;
+    }
+  } );
+
+  Template.journal.helpers( {
+    entries: function() {
+      return PostList;
+    }
+  } );
+
   Template.home.rendered = function() {
-    var list_items = document.querySelectorAll( '.work-list li' )
+    var listItems = document.querySelectorAll( '.work-list tr' )
     var i = 0;
-    console.log('template rendered')
+    console.log( 'If you\'re reading this its too late. The animation happened.' )
 
     function show() {
 
-    // Animate each line individually
-    for ( var i = 0; i < list_items.length; i++ ) {
-      var list_item = list_items[ i ]
-        // Define initial properties
-      dynamics.css( list_item, {
-        opacity: 0,
-        translateY: 20
-      } )
+      // Animate each line individually
+      for ( var i = 0; i < listItems.length; i++ ) {
+        var listItem = listItems[ i ]
+          // Define initial properties
+        dynamics.css( listItem, {
+          opacity: 0,
+          translateY: 20
+        } )
 
-      // Animate to final properties
-      dynamics.animate( list_item, {
-        opacity: 1,
-        translateY: 0
-      }, {
-        type: dynamics.spring,
-        frequency: 300,
-        friction: 280,
-        duration: 800,
-        delay: 80 + i * 40
-      } )
-    }
+        // Animate to final properties
+        dynamics.animate( listItem, {
+          opacity: 1,
+          translateY: 0
+        }, {
+          type: dynamics.spring,
+          frequency: 300,
+          friction: 280,
+          duration: 800,
+          delay: 80 + i * 40
+        } )
+      }
+    };
+    show();
   };
-  show();
-};
 
-$( function() {
-  $( "#toggle-colors" ).click( function() {
-    $( "body" ).addClass( "dark-mode" );
+  $( function() {
+    $( "#toggle-colors" ).click( function() {
+      $( "body" ).addClass( "dark-mode" );
+    } );
   } );
-} );
 }

@@ -1,21 +1,28 @@
 // Global demo styles
 // ---------------------------------------
-
+html {
+  width: 100%;
+  height: 100%;
+}
 body {
   background-color: $backgroundcolor;
   color: $bodycolor;
   overflow-x: hidden;
+  width: 100%;
+  min-height: 100%;
 }
 
 .section {
-  padding: 2rem 0;
+  &:not(.no-pad) {
+    padding: 2rem 0;
 
-  @include breakpoint(break-1) {
-    padding: 3rem 0;
-  }
+    @include breakpoint(break-1) {
+      padding: 2rem 0;
+    }
 
-  @include breakpoint(break-2) {
-    padding: 4rem 0;
+    @include breakpoint(break-2) {
+      padding: 3rem 0;
+    }
   }
 }
 

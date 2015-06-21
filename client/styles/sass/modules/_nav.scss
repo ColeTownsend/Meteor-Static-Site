@@ -1,12 +1,9 @@
 nav[role="navigation"] {
   padding: 2rem 0;
   position: relative;
-  @include breakpoint(break-3) {
-    padding-left: map-get($gutterwidths, medium);
-    padding-right: map-get($gutterwidths, medium);
-  }
-  @include breakpoint(break-1) {
-    width: 100%;
+  &.section.padded {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .left-link > a {
     display: inline-block;
@@ -29,18 +26,18 @@ nav[role="navigation"] {
       text-align: center;
     }
   }
-  &.yellow-bg {
-    a {
-      color: $linkcolor;
-      &:hover, &:focus, &:active {
-        color: map-get($accentcolors, map-get($oppositecolors, indigo));
-      }
-    }
-  }
+  // &.yellow-bg {
+  //   a {
+  //     color: $linkcolor;
+  //     &:hover, &:focus, &:active {
+  //       color: $hovercolor;
+  //     }
+  //   }
+  // }
   a {
-    font-family: unquote(map-get($monospacetype, font-family));
+    font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
-    font-weight: map-get($monospacetype, regular);
+    font-weight: map-get($headingtype, regular);
     @include fontsize(14, 0);
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -55,7 +52,7 @@ nav[role="navigation"] {
     &:hover,
     &:active,
     &:focus {
-      color: $linkcolor;
+      color: $hovercolor;
     }
     @include breakpoint(break-1) {
       letter-spacing: 0.05rem;
@@ -63,10 +60,6 @@ nav[role="navigation"] {
       // @include fontsize(18, 1);
       border: 0;
       padding: 0;
-      &:hover, &:active, &:focus {
-        background-color: transparent;
-        color: darken($linkcolor, 15%);
-      }
     }
     @include breakpoint(break-2) {
       @include fontsize(16, 2);

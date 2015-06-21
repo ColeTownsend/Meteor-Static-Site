@@ -42,6 +42,23 @@
     @include maxwidth(4);
   }
 }
+// removes padding
+.no-padv {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+// mimics padding of columns to align stuff
+.padded {
+  @include breakpoint(break-1) {
+      padding-left: map-get($gutterwidths, small);
+      padding-right: map-get($gutterwidths, small);
+    }
+  @include breakpoint(break-3) {
+    padding-left: map-get($gutterwidths, medium);
+    padding-right: map-get($gutterwidths, medium);
+  }
+}
 
 // Single column.
 .single {
@@ -211,6 +228,24 @@
       padding-left: map-get($gutterwidths, medium);
       @include ideal-measure(4, medium, false);
     }
+  }
+}
+
+.column--right--marginless {
+  @include breakpoint(break-1) {
+    @include ideal-measure(1, small);
+  }
+
+  @include breakpoint(break-2) {
+    @include ideal-measure(2, small);
+  }
+
+  @include breakpoint(break-3) {
+    @include ideal-measure(3, medium);
+  }
+
+  @include breakpoint(break-4) {
+    @include ideal-measure(4, medium);
   }
 }
 

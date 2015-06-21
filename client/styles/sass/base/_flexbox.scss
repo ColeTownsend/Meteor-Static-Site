@@ -4,33 +4,42 @@
   @include display(flex);
   @include align-items(stretch); // Stretch children to fill parent
 
-  &.row {
+  &.fp--row {
     @include flex-direction(row); // Row Layout
   }
-  &.column {
+  &.fp--column {
     @include flex-direction(column); // Column Layout
   }
-  &.align-end {
+  &.fp--align-start {
+    @include justify-content(flex-start); // Top Align
+  }
+  &.fp--align-end {
     @include justify-content(flex-end); // Bottom Align
   }
-  &.fill-space {
+  &.fp--fill-space {
     @include justify-content(space-between);
   }
+  &.fp--baseline {
+    @include align-items(baseline);
+  }
   .flex-child {
-    @include flex(none);
-    &.one {
+    @include flex(auto);
+    &.fc--static {
+      @include flex(none);
+    }
+    &.fc--one {
       @include flex(1);
     }
-    &.fill {
+    &.fc--fill {
       @include align-self(stretch);
     }
-    &.start {
+    &.fc--start {
       @include align-self(start);
     }
-    &.end {
+    &.fc--end {
       @include align-self(flex-end);
     }
-    &.center {
+    &.fc--center {
       @include align-self(center);
     }
   }

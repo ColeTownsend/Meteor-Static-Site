@@ -13,19 +13,13 @@ if ( Meteor.isClient ) {
     }
   } );
 
-  Template.home.helpers( {
+  Template.workListing.helpers( {
     projects: function() {
       return WorkList;
     }
   } );
 
-  Template.work.helpers( {
-    projects: function() {
-      return WorkList;
-    }
-  } );
-
-  Template.journal.helpers( {
+  Template.journalListing.helpers( {
     entries: function() {
       return PostList;
     }

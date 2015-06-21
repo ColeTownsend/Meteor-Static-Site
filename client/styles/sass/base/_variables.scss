@@ -1,4 +1,4 @@
-  // SCSS variables
+// SCSS variables
 // ---------------------------------------
 
 // Note: For the following Sass maps enter values as if they would be px units.
@@ -57,7 +57,7 @@ $gutterwidths: (
 // ! Set cap height to set to the baseline.
 $bodytype: (
   font-family: 'Nitti Grotesk, Myriad Pro, Arial, sans-serif',
-  regular: 400,
+  regular: 300,
   bold: 600,
   italic: italic,
   cap-height: 0.66
@@ -97,7 +97,9 @@ $accentcolors: (
   indigo: #512BC6,
   yellow: #FBF7E6,
   navy: #162237,
-  salmon: #EC9AB5
+  salmon: #EC9AB5,
+  blush: #F5D5D5,
+  green: #8CE4D0,
 );
 
 $oppositecolors: (
@@ -118,5 +120,5 @@ $captioncolor: map-get($accentcolors, salmon);
 $white: #FFFFFF;
 
 // Background colors.
-$backgroundcolor: $white; //map-get($accentcolors, cyan);
+$backgroundcolor: #FAFAFA; //map-get($accentcolors, cyan);
 $codeBackgroundcolor: map-get($accentcolors, navy);

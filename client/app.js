@@ -17,13 +17,16 @@ if ( Meteor.isClient ) {
     }
   } );
 
-  // for listings
-  // Template.listing.helpers( {
-  //   getTemplateName: function() {
-  //     var temp = Router.current().route.getName();
-  //     return temp;
-  //   }
-  // } );
+  Template.listing.helpers( {
+    isWork: function() {
+      var instance = Template.instance();
+      if ( instance.data.search( 'work' ) > -1 ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  } );
 
   Template.workListing.helpers( {
     projects: function() {

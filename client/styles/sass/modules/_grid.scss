@@ -6,69 +6,52 @@
   .smaller {
     width: 38%;
   }
-  .flex-parent {
-    @include display(flex);
-    @include align-items(stretch); // Stretch children to fill parent
-    &.row {
-      @include flex-direction(row); // Row Layout
-    }
-    &.column {
-      @include flex-direction(column); // Column Layout
-    }
-    &.align-bottom {
-      @include justify-content(flex-end); // Bottom Align
-    }
+  .medium {
+    width: 48%;
   }
 }
 
 // style modules etc
 .card {
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, .08);
   position: relative;
   color: $bodycolor;
   padding: 1rem;
-  height: 300px;
+  height: 20rem;
   overflow: hidden;
   @include transition(all .5s ease-in-out);
   background: #f7f7f7;
-  &.cyan-bg {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  &:nth-of-type(even) {
+    margin-right: 0;
+  }
+  h3 {
+    font-weight: 200;
+  }
+
+  &.cyan-bg, &.blush-bg, &.yellow-bg {
     h3, p, small {
       color: $bodycolor;
     }
+    .faux-hr {
+      background: $bodycolor;
+    }
+    small {
+      opacity: .8;
+    }
   }
-  &.cosmic-bg {
-    background: #C5A3E6;
+  &.navy-bg, &.indigo-bg, &.green-bg, &.cosmic-bg, &.pink-bg  {
     h3, p, small {
       color: $white;
     }
-  }
-  &.blush-bg {
-    h3, p, small {
-      color: $bodycolor;
-    }
-  }
-  &.green-bg {
-    h3, p, small {
-      color: $white;
-    }
-  }
-  &.navy-bg {
-    h3, p, small {
-      color: $white;
-    }
-  }
-  &.indigo-bg {
-    h3, p, small {
-      color: $white;
+    small {
+      opacity: .9;
     }
   }
   &:hover {
-    box-shadow: 0 0 3px 1px rgba(0, 0, 0, .3);
-    @include transition(all .5s ease-in-out);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .12);
+    @include transition(all .4s ease-in-out);
     z-index: 100;
-  }
-  small {
-    opacity: .6;
   }
 }
 
@@ -115,14 +98,13 @@
 
 .faux-hr {
   border: none;
-  height: 4px;
+  height: 2px;
   display: block;
   width: 100%;
-  margin: calc(1rem - 2px) auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: calc(1rem - 1px);
   background: white;
-  &.black {
-    background: $bodycolor;
-  }
 }
 
 // margin + padding utilites

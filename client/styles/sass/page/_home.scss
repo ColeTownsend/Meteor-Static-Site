@@ -20,12 +20,10 @@
 .cta > .callout {
   position: absolute;
   font-size: 80px;
-  font-weight: bold;
-  font-family: "Neuzeit Grotesk";
+  font-weight: light;
   line-height: 92px;
   letter-spacing: -0.05em;
-  background-blend-mode: overlay;
-  mix-blend-mode: overlay;
+  opacity: .04;
   display: none;
   color: #222222;
   text-decoration: none;
@@ -33,11 +31,11 @@
   @include breakpoint(break-2) {
     @include maxwidth(3);
     display: block;
-    top: 67px;
+    top: 80px;
     left: 0;
   }
   @include breakpoint(break-3) {
-    top: 79px;
+    top: 76px;
     left: 0;
   }
 }

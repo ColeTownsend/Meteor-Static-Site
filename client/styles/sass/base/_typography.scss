@@ -42,9 +42,15 @@ a {
 .bodyfont {
   font-family: unquote(map-get($bodytype, font-family));
 }
-
 .semilight {
   font-weight: unquote(map-get($bodytype, font-weight));
+}
+.light {
+  font-weight: 200;
+}
+
+.mono {
+  font-family: unquote(map-get($monospacetype, font-family));
 }
 
 

@@ -66,13 +66,13 @@ $bodytype: (
 
 $headingtype: (
   font-family: 'Nitti Grotesk, Myriad Pro, Arial, sans-serif',
-  regular: 400,
-  bold: 400,
+  regular: 200,
+  bold: 500,
   cap-height: 0.66
 );
 
 $monospacetype: (
-  font-family: 'Nitti PX, monospace',
+  font-family: 'Menlo, monospace',
   regular: 400,
   cap-height: 0.68
 );
@@ -94,13 +94,13 @@ $monospacetype: (
 // accent colors
 $accentcolors: (
   pink: #ff2078,
-  cyan: #EDF9FD,
+  cyan: darken(#EDF9FD, 5%),
   indigo: #512BC6,
   yellow: #FBF7E6,
   navy: #162237,
   salmon: #EC9AB5,
   blush: #F5D5D5,
-  green: #8CE4D0,
+  green: darken(#8CE4D0, 3%),
 );
 
 $oppositecolors: (
@@ -121,5 +121,5 @@ $captioncolor: map-get($accentcolors, salmon);
 $white: #FFFFFF;
 
 // Background colors.
-$backgroundcolor: #FAFAFA; //map-get($accentcolors, cyan);
+$backgroundcolor: $white; //map-get($accentcolors, cyan);
 $codeBackgroundcolor: map-get($accentcolors, navy);

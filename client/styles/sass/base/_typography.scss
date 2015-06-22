@@ -42,13 +42,15 @@ a {
 .bodyfont {
   font-family: unquote(map-get($bodytype, font-family));
 }
-.semilight {
+.regular, .typeset .regular {
+  font-weight: 400;
+}
+.semilight, .typeset .semilight {
   font-weight: unquote(map-get($bodytype, font-weight));
 }
-.light {
+.light, .typeset .light {
   font-weight: 200;
 }
-
 .mono {
   font-family: unquote(map-get($monospacetype, font-family));
 }
@@ -114,11 +116,13 @@ a {
   // Heading level 1.
   h1, .alpha {
     @include sassline($fontsize: alpha, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
+    font-weight: map-get($headingtype, regular);
   }
 
   // Heading level 2.
   h2, .beta {
     @include sassline(beta, $headingtype, 3, 1, all);
+    font-weight: map-get($headingtype, regular);
   }
 
   // Heading level 3.

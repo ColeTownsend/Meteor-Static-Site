@@ -1,0 +1,15 @@
+<template name="listing">
+  <table class="listing">
+    <tr class="border-top"></tr>
+    {{#if isWork}}
+      {{#each entries}}
+        {{> journalListingItem}}
+      {{/each}}
+      {{ else }}
+      {{#each entries}}
+      {{> journalListingItem}}
+      {{/each}}
+    {{/if}}
+
+  </table>
+</template>

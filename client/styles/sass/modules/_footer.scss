@@ -1,17 +1,47 @@
 // Footer demo styles
 // ---------------------------------------
-
-.global-footer {
-
-  p {
-    color: $captioncolor;
-    font-family: unquote(map-get($headingtype, font-family));
-    font-style: normal;
-    font-weight: map-get($headingtype, regular);
-    padding: 1rem 0;
-    margin: 0;
-    text-align: center;
-
-    @include fontsize(eta, all);
+footer {
+  $pink: map-get($accentcolors, pink);
+  .left {
+    border-right: 1px solid #EBEBEB;
+    margin-right: -1px;
+    &:hover {
+      @include transform(translate3d(0.5rem, -0.5rem, 2px));
+    }
+  }
+  .right {
+    border-left: 1px solid #EBEBEB;
+    margin-left: -1px;
+    &:hover {
+      @include transform(translate3d(-0.5rem, -0.5rem, 2px));
+    }
+  }
+  .divider {
+    width: 1px;
+    background-color: #EBEBEB;
+    position: relative;
+    z-index: 10;
+  }
+  .card {
+    border-top: 1px solid #EBEBEB;
+    background-color: $white;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    -webkit-font-smoothing: antialiased;
+    @include transition(all, .2s $ease-in-out-quad);
+    cursor: hand;
+    cursor: pointer;
+    &:hover {
+      -webkit-font-smoothing: antialiased;
+      box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    }
+    // responsive padding
+    @include breakpoint(break-1) {
+      padding: 2rem;
+    }
+    @include breakpoint(break-2) {
+      padding: 3rem;
+    }
   }
 }

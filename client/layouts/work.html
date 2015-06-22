@@ -1,20 +1,14 @@
 <template name="work">
   {{> navDefault}}
   <main class="section">
-    <table class="work-list">
-      <tr class="border-top"></tr>
-      {{#each projects}}
-      <tr class="flex-parent fp--row fp--align-start fp--baseline typeset">
-        <td class="flex-child list-title zeta"><a href='/work/{{template}}'>{{title}}</a></td>
-        <td class="column flex-child fc--end  column--right--marginless">
-          <p class="zeta">{{info}}
-            <br><a href='/work/{{template}}'>Read case study</a></p>
-        </td>
-      </tr>
-      {{/each}}
-    </table>
+    {{> workListing }}
   </main>
 </template>
+
 <template name="caseStudy">
-  {{> navDefault}} {{>Template.dynamic template=getTemplateName}}
+  {{> navDefault}}
+  {{>Template.dynamic template=getTemplateName  }}
+  {{> postFooter }}
 </template>
+
+

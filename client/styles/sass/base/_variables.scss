@@ -1,4 +1,4 @@
-  // SCSS variables
+// SCSS variables
 // ---------------------------------------
 
 // Note: For the following Sass maps enter values as if they would be px units.
@@ -27,12 +27,13 @@ $rootsizes: (
 // Aim for 75–100 characters a line when possible, at smaller sizes type size is more important.
 // ! Make sure to have as many widths as breakpoints above.
 // Note: this was 'maxwidths' in previous versions.
+
 $measures: (
-  measure-0: 480,  // 500px wide
-  measure-1: 520,  // 550px wide
-  measure-2: 580,  // 600px wide
-  measure-3: 660,  // 680px wide
-  measure-4: 740   // 750px wide
+  measure-0: 500,  // 500px wide
+  measure-1: 550,  // 550px wide
+  measure-2: 600,  // 600px wide
+  measure-3: 680,  // 680px wide
+  measure-4: 750   // 750px wide
 );
 
 // Set the max-widths for containers (based on design).
@@ -57,7 +58,7 @@ $gutterwidths: (
 // ! Set cap height to set to the baseline.
 $bodytype: (
   font-family: 'Nitti Grotesk, Myriad Pro, Arial, sans-serif',
-  regular: 400,
+  regular: 300,
   bold: 600,
   italic: italic,
   cap-height: 0.66
@@ -65,13 +66,13 @@ $bodytype: (
 
 $headingtype: (
   font-family: 'Nitti Grotesk, Myriad Pro, Arial, sans-serif',
-  regular: 400,
-  bold: 400,
+  regular: 200,
+  bold: 500,
   cap-height: 0.66
 );
 
 $monospacetype: (
-  font-family: 'Nitti PX, monospace',
+  font-family: 'Menlo, monospace',
   regular: 400,
   cap-height: 0.68
 );
@@ -93,11 +94,13 @@ $monospacetype: (
 // accent colors
 $accentcolors: (
   pink: #ff2078,
-  cyan: #EDF9FD,
+  cyan: darken(#EDF9FD, 5%),
   indigo: #512BC6,
   yellow: #FBF7E6,
   navy: #162237,
-  salmon: #EC9AB5
+  salmon: #EC9AB5,
+  blush: #F5D5D5,
+  green: darken(#8CE4D0, 3%),
 );
 
 $oppositecolors: (

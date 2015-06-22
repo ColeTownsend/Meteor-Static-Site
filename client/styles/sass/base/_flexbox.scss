@@ -10,6 +10,9 @@
   &.fp--column {
     @include flex-direction(column); // Column Layout
   }
+  &.fp--wrap {
+    @include flex-wrap(wrap);
+  }
   &.fp--align-start {
     @include justify-content(flex-start); // Top Align
   }
@@ -27,8 +30,11 @@
     &.fc--static {
       @include flex(none);
     }
-    &.fc--one {
+    &.fc--1 {
       @include flex(1);
+    }
+    &.fc--2  {
+      @include flex(2);
     }
     &.fc--fill {
       @include align-self(stretch);

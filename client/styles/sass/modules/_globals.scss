@@ -4,6 +4,7 @@ html {
   width: 100%;
   height: 100%;
 }
+
 body {
   background-color: $backgroundcolor;
   color: $bodycolor;
@@ -12,14 +13,17 @@ body {
   min-height: 100%;
 }
 
+#iron-router-progress {
+  background-color: map-get($accentcolors, pink);
+  box-shadow: 0 0 2px map-get($accentcolors, pink);
+}
+
 .section {
   &:not(.no-pad) {
     padding: 2rem 0;
-
     @include breakpoint(break-1) {
       padding: 2rem 0;
     }
-
     @include breakpoint(break-2) {
       padding: 3rem 0;
     }
@@ -28,11 +32,9 @@ body {
 
 img {
   -ms-interpolation-mode: bicubic;
-
   height: auto;
   vertical-align: middle;
   width: 100%;
-
   @include breakpoint(break-1) {
     margin: 0 auto;
     max-width: 100%;

@@ -1,0 +1,8 @@
+<template name="journalListing">
+  <table class="listing">
+    <tr class="border-top"></tr>
+    {{#each entries}}
+    {{> journalListingItem}}
+    {{/each}}
+  </table>
+</template>

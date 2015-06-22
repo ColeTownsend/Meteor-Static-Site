@@ -1,27 +1,7 @@
 <template name="home">
   {{> navDefault }}
   <main class="section no-pad">
-    <article class="block-1 flex-parent fp--fill-space">
-      <div class="cta flex-child fc--center">
-        <aside class="column column--right typeset ">
-          <p class="flex-child fc--end epsilon">Cole Townsend is a designer who wants to work with you. He has a penchant for thoughful solutions. Currently, he is in the District freelancing sweating. In the fall he will be at Thoughbot in Boston. <a href="#">Let's make something excellent.</a></p>
-        </aside>
-        <a href="#" class="callout cyan">Let's make something excellent</a>
-        <div class="clearfix"></div>
-      </div>
-    </article>
-    <table class="work-list">
-      <tr class="border-top"></tr>
-      {{#each projects}}
-      <tr class="flex-parent fp--row fp--align-start fp--baseline typeset">
-        <td class="flex-child list-title "><p class="zeta"><a class="zeta plain-link" href='/work/{{template}}'>{{title}}</a></p></td>
-        <td class="column flex-child fc--end  column--right--marginless">
-          <div class="hover small-bg" style="background-image: url('/work/panda-jobs-bg.jpg')"></div>
-          <p class="zeta">{{info}}
-            <br><a href='/work/{{template}}'>Read case study</a></p>
-        </td>
-      </tr>
-      {{/each}}
-    </table>
+    {{> home_cta_alt }}
+    {{> workGrid }}
   </main>
 </template>

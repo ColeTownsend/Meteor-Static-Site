@@ -2,16 +2,7 @@
   <table class="listing">
     <tr class="border-top"></tr>
     {{#each entries}}
-    <tr class="flex-parent fp--row fp--align-start fp--baseline typeset">
-      <td class="flex-child list-title ">
-        <p class="zeta"><a class="zeta plain-link" href='/work/{{template}}'>{{title}}</a></p>
-      </td>
-      <td class="column flex-child fc--end  column--right--marginless">
-        <div class="hover large-bg" style="background-image: url('images/work/panda-jobs-bg-min.jpg')"></div>
-        <p class="zeta">{{info}}
-          <br><a href='/work/{{template}}'>Read case study</a></p>
-      </td>
-    </tr>
+    {{> journalListingItem}}
     {{/each}}
   </table>
 </template>

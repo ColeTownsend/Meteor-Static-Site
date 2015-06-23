@@ -1,22 +1,4 @@
 if ( Meteor.isClient ) {
-  // for post pages
-  Template.caseStudy.helpers( {
-    getTemplateName: function() {
-      var slug = Router.current().params.slug;
-      return slug;
-    },
-    projects: function() {
-      return WorkList;
-    }
-  } );
-
-  Template.journalPost.helpers( {
-    getTemplateName: function() {
-      var slug = Router.current().params.slug;
-      return slug;
-    }
-  } );
-
   Template.listing.helpers( {
     isWork: function() {
       var instance = Template.instance();
@@ -25,29 +7,16 @@ if ( Meteor.isClient ) {
       } else {
         return false;
       }
-    }
-  } );
-
-  Template.workListing.helpers( {
-    projects: function() {
-      return WorkList;
-    }
+    },
+    projects: WorkList,
+    entries: PostList
   } );
 
   Template.workGrid.helpers( {
-    projects: function() {
-      return WorkList;
-    }
+    projects: WorkList
   } );
 
-  Template.journalListing.helpers( {
-    entries: function() {
-      return PostList;
-    }
-  } );
-
-
-  Template.workListing.rendered = function() {
+  Template.listing.rendered = function() {
     var listItems = document.querySelectorAll( '.listing tr' )
     var i = 0;
     console.log( 'If you\'re reading this its too late. The animation happened.' )
@@ -79,41 +48,37 @@ if ( Meteor.isClient ) {
     setTimeout( show(), 400 )
   };
 
-  Template.journalListing.rendered = function() {
-    var listItems = document.querySelectorAll( '.listing tr' )
+  Template.workGrid.rendered = function() {
+    var gridItems = document.querySelectorAll( '.grid .card' )
     var i = 0;
     console.log( 'If you\'re reading this its too late. The animation happened.' )
 
-    function show() {
+    function bubble() {
 
       // Animate each line individually
-      for ( var i = 0; i < listItems.length; i++ ) {
-        var listItem = listItems[ i ]
+      for ( var i = 0; i < gridItems.length; i++ ) {
+        var gridItem = gridItems[ i ]
           // Define initial properties
-        dynamics.css( listItem, {
+        dynamics.css( gridItem, {
+          scale: .5,
           opacity: 0,
-          translateY: 20
+          translateY: 40
         } )
 
         // Animate to final properties
-        dynamics.animate( listItem, {
+        dynamics.animate( gridItem, {
+          scale: 1,
           opacity: 1,
           translateY: 0
         }, {
           type: dynamics.spring,
-          frequency: 300,
-          friction: 280,
-          duration: 800,
-          delay: 80 + i * 40
+          frequency: 600,
+          friction: 400,
+          duration: 1200,
+          delay: 150 + i * 80
         } )
       }
     };
-    setTimeout( show(), 400 )
+    setTimeout( bubble(), 200 )
   };
-
-  $( function() {
-    $( "#toggle-colors" ).click( function() {
-      $( "body" ).addClass( "dark-mode" );
-    } );
-  } );
 }

@@ -1,3 +1,10 @@
+Template.journalPost.helpers( {
+  getTemplateName: function() {
+    var slug = Router.current().params.slug;
+    return slug;
+  }
+} );
+
 PostList = [ {
   title: 'Other Stuff',
   client: 'Panda Network',

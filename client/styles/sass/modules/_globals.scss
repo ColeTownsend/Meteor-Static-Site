@@ -13,9 +13,22 @@ body {
   min-height: 100%;
 }
 
+// iron router
 #iron-router-progress {
   background-color: map-get($accentcolors, pink);
   box-shadow: 0 0 2px map-get($accentcolors, pink);
+}
+
+// layout utilities
+.clearfix {
+  @include clearfix();
+}
+.db {
+  display: block;
+}
+.dib {
+  display: inline-block;
+  margin-left: -4px; // trim the fat
 }
 
 .section {
@@ -30,6 +43,7 @@ body {
   }
 }
 
+// responsive images
 img {
   -ms-interpolation-mode: bicubic;
   height: auto;

@@ -3,13 +3,12 @@
     <tr class="border-top"></tr>
     {{#if isWork}}
       {{#each entries}}
-        {{> journalListingItem}}
+        {{> workListingItem}}
       {{/each}}
       {{ else }}
       {{#each entries}}
-      {{> journalListingItem}}
+        {{> journalListingItem}}
       {{/each}}
     {{/if}}
-
   </table>
 </template>

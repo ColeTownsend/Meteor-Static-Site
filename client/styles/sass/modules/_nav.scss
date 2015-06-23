@@ -37,12 +37,8 @@ nav[role="navigation"] {
   a {
     font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
-    font-weight: map-get($headingtype, regular);
     @include fontsize(14, 0);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    @include user-select();
     color: $bodycolor;
     cursor: pointer;
     display: block;

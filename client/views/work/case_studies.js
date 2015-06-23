@@ -1,3 +1,10 @@
+Template.caseStudy.helpers( {
+  getTemplateName: function() {
+    var slug = Router.current().params.slug;
+    return slug;
+  }
+} );
+
 WorkList = [ {
   title: 'Panda Jobs',
   client: 'Panda Network',

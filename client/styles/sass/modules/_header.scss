@@ -31,21 +31,22 @@ header {
     h1 {
       font-size: 4rem;
       color: $white;
-      font-family: "GT Walsheim Pro Trial";
-      font-weight: normal;
+      font-family: "Avenir","Avenir Next", "Helvetica","Arial", san-serif;
+      font-weight: bold;
     }
   }
 }
 
-.backshape {
-  display:block;
-  position:absolute;
-  margin:50px auto 200px;
-  width:100%;
-  padding:0 5%;
-  transform:skew(0deg,-5deg);
-  -ms-transform:skew(0deg,-10deg);
-  -webkit-transform:skew(0deg,-5deg);
-}
+// diagonal shape
+// .backshape {
+//   display:block;
+//   position:absolute;
+//   margin:50px auto 200px;
+//   width:100%;
+//   padding:0 5%;
+//   transform:skew(0deg,-5deg);
+//   -ms-transform:skew(0deg,-10deg);
+//   -webkit-transform:skew(0deg,-5deg);
+// }
 
 

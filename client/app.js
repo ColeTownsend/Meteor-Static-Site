@@ -60,25 +60,45 @@ if ( Meteor.isClient ) {
         var gridItem = gridItems[ i ]
           // Define initial properties
         dynamics.css( gridItem, {
-          scale: .5,
+          // scale: .8,
           opacity: 0,
           translateY: 40
         } )
 
         // Animate to final properties
         dynamics.animate( gridItem, {
-          scale: 1,
+          // scale: 1,
           opacity: 1,
           translateY: 0
         }, {
           type: dynamics.spring,
-          frequency: 600,
-          friction: 400,
-          duration: 1200,
-          delay: 150 + i * 80
+          frequency: 200,
+          friction: 300,
+          duration: 800,
+          delay: 80 + i * 80
         } )
       }
     };
     setTimeout( bubble(), 200 )
   };
 }
+
+Template.about.rendered = function() {
+  var cole = document.querySelectorAll( '.grid .card' )
+
+  function snap() {
+    // Animate each line individually
+    // Animate to final properties
+    dynamics.animate( gridItem, {
+      // scale: 1,
+      opacity: 1,
+      translateY: 0
+    }, {
+      type: dynamics.spring,
+      frequency: 200,
+      friction: 300,
+      duration: 800,
+      delay: 80 + i * 80
+    } )
+  }
+};

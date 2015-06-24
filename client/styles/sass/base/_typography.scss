@@ -186,6 +186,7 @@ a {
     font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
     font-weight: 400;
+    color: $captioncolor;
 
     @include fontsize(theta, all);
   }

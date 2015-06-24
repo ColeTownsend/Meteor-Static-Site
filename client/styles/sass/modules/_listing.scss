@@ -4,7 +4,8 @@
   tr {
     &:not(.border-top) {
       border-bottom: 1px solid $bodycolor;
-      padding: 2rem 0;
+      padding-bottom: 2rem;
+      padding-top: 1.5rem;
     }
     &.border-top {
       height: 1px;

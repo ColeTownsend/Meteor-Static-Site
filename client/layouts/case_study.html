@@ -1,0 +1,27 @@
+<template name="globalCaseStudy">
+  {{> navDefault}}
+  {{> caseStudyHeader title=getTitle }}
+  <section class="white-bg" id="baseline">
+    <div class="section typeset">
+      <div class="column column--sidebar">
+        <p>
+          <small class="upper regular cadet-blue">Client</small>
+          <br>{{> yield "client" }}
+          <br>
+          <small class="upper regular cadet-blue">Challenge</small>
+          <br> {{> yield "challenge" }}
+          <br>
+        </p>
+      </div>
+      <div class="column column--main">
+        {{> yield "intro"}} <!-- need at least one thing here -->
+      </div>
+      {{> yield }}
+      <p>
+      <small class="upper regular cadet-blue">Extra Credit and Thanks</small>
+      {{> yield "credits" }}
+      </p>
+    </div>
+  </section>
+  {{> postFooter }}
+</template>

@@ -1,6 +1,8 @@
-<template name="introducing-fast-render">
+<template name="goodrich-swipes">
+{{> caseStudyHeader title="Goodrich Swipes" }}
 <section class="section typeset">
-<div class="column single">
+{{> caseStudyInfo client="Panda Network" challenge="This is where challenge info should go. It should be a couple lines ot text. Right now the data context is a little wonky." }}
+<div class="column column--main">
 {{#markdown}}
 
 # Introducing Fast Render
@@ -25,10 +27,7 @@ Let's try a demo to see what Fast Render can do. I have added Fast Render suppor
 * [Telescope with Fast Render](http://fast-render-telescope.meteor.com/)
 
 For more information on the comparison, see the video below.
-
-<iframe width="640" height="360" src="//www.youtube.com/embed/mGcE6UVOqPk?rel=0" frameborder="0" allowfullscreen="1">
-</iframe>
-
+å
 ## Simple Integration
 
 [Fast Render](http://meteorhacks.com/fast-render) does all the hard work for you. All you have to do is specify which   data and subscriptions need to send to the client with the HTML. You can do that with a simple API. See the example below:

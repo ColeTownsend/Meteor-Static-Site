@@ -16,6 +16,14 @@ if ( Meteor.isClient ) {
     projects: WorkList
   } );
 
+  Template.caseStudy.helpers( {
+    getTemplateName: function() {
+      var slug = Router.current().params.slug;
+      return slug;
+    }
+  } );
+
+
   Template.listing.rendered = function() {
     var listItems = document.querySelectorAll( '.listing tr' )
     var i = 0;

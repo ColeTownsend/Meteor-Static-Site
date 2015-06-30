@@ -69,30 +69,31 @@ Template.workGrid.helpers( {
 Template.caseStudy.helpers( {
   getTemplateName: function() {
     var slug = Router.current().params.slug;
+    console.log("get template fxn");
+    return slug;
+
+  }
+} );
+
+Template.globalCaseStudy.helpers( {
+  slug: function() {
+    var slug = Router.current().params.slug;
+    console.log("getSlug fxn");
     return slug;
   },
-  content: function() {
-    var works = WorkList;
+  getContent: function() {
+    console.log("we are getting the content!");
+    var WorkList = [{title: "Panda Jobs", template: "startup-launch-list", info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae eligendi tempore, sapiente sit expedita necessitatibus sint reprehenderit nesciunt animi quaerat!"}];
     var currentProject = Session.get( 'current-project' );
-    var project = _.find( works, function( project ) {
+    var project = _.find( WorkList, function( project ) {
       return project.title == 'Panda Jobs';
     } );
     return project;
   }
 } );
 
-Template.globalCaseStudy.helpers( {
-  getSlug: function() {
-    var slug = Router.current().params.slug;
-    console.log( slug )
-    return slug
-  }
-} );
-
 
 Template.thenews.rendered = function() {
-  console.log( "hello!" );
-
   function itunesMeta() {
     var meta = document.createElement( 'meta' );
     meta.name = "apple-itunes-app"

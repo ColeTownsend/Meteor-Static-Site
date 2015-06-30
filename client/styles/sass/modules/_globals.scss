@@ -43,6 +43,12 @@ body {
   }
 }
 
+.section + .section {
+    &:not(:last-of-type) {
+      padding: 0;
+    }
+}
+
 // responsive images
 img {
   -ms-interpolation-mode: bicubic;

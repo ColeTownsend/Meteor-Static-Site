@@ -2,13 +2,13 @@
   {{> navDefault}}
   <header role="hero" class="flex-parent">
     <div class="flex-child center title">
-      <img src="../images/work/{{ getSlug }}@2x.png" alt="Panda Network Logo" class="logo dib">
+      <img src="../images/work/{{ slug }}@2x.png" alt="Panda Network Logo" class="logo dib">
       <h1 class="dib title">{{> yield "title" }}</h1>
     </div>
-    <div class="hero-img" style="background-image: url('../images/work/{{ getSlug }}-bg-min.jpg');"></div>
+    <div class="hero-img" style="background-image: url('../images/work/{{ slug }}-bg-min.jpg');"></div>
   </header>
-  <section class="white-bg" id="baseline">
-    <div class="section typeset">
+  <main class="white-bg" id="baseline">
+    <section class="section typeset">
       <div class="column column--sidebar">
         <p>
           <small class="upper regular cadet-blue">Client</small>
@@ -20,16 +20,21 @@
       </div>
       <div class="column column--main">
         <p>{{> yield "intro"}}</p>
+        <p>Title here: {{ getContent }} </p>
         <!-- need at least one thing here -->
       </div>
+    </section>
+    <section class="typeset section">
       {{> yield }}
+    </section>
+    <section class="typset section">
       <div class="column column--main column--right">
         <p>
           <small class="upper regular cadet-blue">Extra Credit and Thanks</small>
           <br> {{> yield "credits" }}
         </p>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
   {{> postFooter }}
 </template>

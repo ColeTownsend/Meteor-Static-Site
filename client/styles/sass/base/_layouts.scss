@@ -38,6 +38,10 @@
 .single {
   margin: 0 auto;
   @include measure(all);
+  .section-heading {
+    position: absolute;
+    left: -1rem;
+  }
 }
 
 // Base column styles.
@@ -103,6 +107,10 @@
 
   @include breakpoint(break-4) {
     @include ideal-measure(4, medium);
+  }
+  .section-heading {
+    position: absolute;
+    left: 0;
   }
 }
 
@@ -182,7 +190,7 @@
 
   .sidenote {
     @include breakpoint(break-1) {
-      left: 0;
+      left: 1rem;
       padding-left: map-get($gutterwidths, small);
       padding-right: map-get($gutterwidths, medium);
       position: absolute;

@@ -1,30 +1,36 @@
 <template name="about">
-  {{> navDefault}}
-  <main class="section typeset">
-    <aside class="column column--duo">
-      <div class="profile">
-        <span class="border"></span>
-        <img src="profile.jpg" alt="">
+  <section class="section typeset no-pad">
+    <h1 class="padded pink">I make stuff and break stuff.</h1>
+  </section>
+  <section class="section typeset">
+    <aside class="column column--sidebar">
+    </aside>
+    <article class="column column--main">
+     <div class="profile">
+        <img src="profile-full.jpg" alt="">
       </div>
-      <br>
-      <br>
+      <p> My name is Cole Townsend I am a designer, a runner, and a Buffalonian. I studied Art History at Williams College. I like chemex coffee, running, and napping in that order. I think programming is cool,
+        <del>but don’t actually program that much</del> and I learned python then built <a href="http://coletownsend.github.io/ben-cole-project/">this Tour de France visualization</a>. I’m always trying to learn new things. MeteorJS and FramerJS are on my shortlist.
+      </p>
+      <p><a href="#">Let's work together.</a></p>
+
+    </article>
+    <aside class="column column--sidebar">
       <p>
-        <small class="upper regular cadet-blue">Current Status</small>
+        <small class="upper regular cadet-blue ">Current Status</small>
         <br>{{ cole.status }}
         <br>
-        <br>
         <small class="upper regular cadet-blue">Education</small>
-        <br> {{ cole.college }} Class of '{{ cole.graduation }}
-        <br>
-        <br>
+        <br> {{ cole.college }}, 20{{ cole.graduation }}
+        <br> Bachelor of Liberal Arts in the Arts
         <small class="upper regular cadet-blue">Projects</small>
         <br> {{#each cole.projects }}
-        <a href="{{url}}">{{ name }}</a><br> {{/each}}
+        <a href="{{url}}">{{ name }}</a>
+        <br> {{/each}}
+        <small class="upper regular cadet-blue">Clientele</small>
+        <br> {{#each cole.clients }} {{ name }}
+        <br> {{/each}}
       </p>
     </aside>
-    <article class="column column--duo">
-      My name is Cole Townsend, and I am a designer, a runner, and a Buffalonian. I studied Art History at Williams College. I like chemex coffee, running, and napping in that order. I think programming is cool,
-      <del>but don’t actually program that much</del> and I learned python then built <a href="http://coletownsend.github.io/ben-cole-project/">this Tour de France visualization</a>. I’m always trying to learn new things. MeteorJS and FramerJS are on my shortlist.
-    </article>
-  </main>
+  </section>
 </template>

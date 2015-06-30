@@ -16,14 +16,6 @@ if ( Meteor.isClient ) {
     projects: WorkList
   } );
 
-  Template.caseStudy.helpers( {
-    getTemplateName: function() {
-      var slug = Router.current().params.slug;
-      return slug;
-    }
-  } );
-
-
   Template.listing.rendered = function() {
     var listItems = document.querySelectorAll( '.listing tr' )
     var i = 0;
@@ -90,23 +82,3 @@ if ( Meteor.isClient ) {
     setTimeout( bubble(), 200 )
   };
 }
-
-Template.about.rendered = function() {
-  var cole = document.querySelectorAll( '.grid .card' )
-
-  function snap() {
-    // Animate each line individually
-    // Animate to final properties
-    dynamics.animate( gridItem, {
-      // scale: 1,
-      opacity: 1,
-      translateY: 0
-    }, {
-      type: dynamics.spring,
-      frequency: 200,
-      friction: 300,
-      duration: 800,
-      delay: 80 + i * 80
-    } )
-  }
-};

@@ -1,6 +1,12 @@
 <template name="globalCaseStudy">
   {{> navDefault}}
-  {{> caseStudyHeader title=getTitle }}
+  <header role="hero" class="flex-parent">
+    <div class="flex-child center title">
+      <img src="../images/work/{{ getSlug }}@2x.png" alt="Panda Network Logo" class="logo dib">
+      <h1 class="dib title">{{> yield "title" }}</h1>
+    </div>
+    <div class="hero-img" style="background-image: url('../images/work/{{ getSlug }}-bg-min.jpg');"></div>
+  </header>
   <section class="white-bg" id="baseline">
     <div class="section typeset">
       <div class="column column--sidebar">
@@ -10,17 +16,19 @@
           <br>
           <small class="upper regular cadet-blue">Challenge</small>
           <br> {{> yield "challenge" }}
-          <br>
         </p>
       </div>
       <div class="column column--main">
-        {{> yield "intro"}} <!-- need at least one thing here -->
+        <p>{{> yield "intro"}}</p>
+        <!-- need at least one thing here -->
       </div>
       {{> yield }}
-      <p>
-      <small class="upper regular cadet-blue">Extra Credit and Thanks</small>
-      {{> yield "credits" }}
-      </p>
+      <div class="column column--main column--right">
+        <p>
+          <small class="upper regular cadet-blue">Extra Credit and Thanks</small>
+          <br> {{> yield "credits" }}
+        </p>
+      </div>
     </div>
   </section>
   {{> postFooter }}

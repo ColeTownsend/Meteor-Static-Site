@@ -32,7 +32,7 @@ body {
 }
 
 .section {
-  &:not(.no-pad) {
+  &:not(.no-pad){
     padding: 2rem 0;
     @include breakpoint(break-1) {
       padding: 2rem 0;

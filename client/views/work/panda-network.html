@@ -1,7 +1,18 @@
 <template name="panda-network">
 {{> caseStudyHeader title="Startup Book List" }}
 <section class="section typeset">
-{{> caseStudyInfo client="Panda Network" challenge="This is where challenge info should go. It should be a couple lines ot text. Right now the data context is a little wonky." }}
+{{#contentFor "challenge"}}
+This is where challenge info should go. It should be a couple lines ot text. Right now the data context is a little wonky.
+{{/contentFor}}
+
+{{#contentFor "challenge"}}
+This is where challenge info should go. It should be a couple lines ot text. Right now the data context is a little wonky.
+{{/contentFor}}
+
+{{#contentFor "intro"}}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis incidunt earum ipsam sit maxime officia non iure nisi. Excepturi ducimus, quas, temporibus veritatis amet corrupti fugiat. Doloribus earum suscipit dolor, expedita, pariatur blanditiis recusandae quaerat porro labore eum fugit quisquam soluta? Voluptatibus eveniet culpa expedita mollitia, nobis nulla! Enim, doloribus.
+{{/contentFor}}
+
 <div class="column column--main">
 {{#markdown}}
 
@@ -27,9 +38,6 @@ Let's try a demo to see what Fast Render can do. I have added Fast Render suppor
 * [Telescope with Fast Render](http://fast-render-telescope.meteor.com/)
 
 For more information on the comparison, see the video below.
-
-<iframe width="640" height="360" src="//www.youtube.com/embed/mGcE6UVOqPk?rel=0" frameborder="0" allowfullscreen="1">
-</iframe>
 
 ## Simple Integration
 

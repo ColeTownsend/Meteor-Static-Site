@@ -1,7 +1,9 @@
 <template name="workGrid">
-  <section class="grid clearfix flex-parent fp--row fp--wrap">
+  <section class="grid clearfix flex-parent fp--row fp--wrap padded">
     {{#each projects}}
+      {{#if isPublished "true" }}
       {{> gridItem }}
+      {{/if }}
     {{/each}}
   </section>
 </template>

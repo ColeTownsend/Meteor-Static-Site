@@ -1,14 +1,11 @@
 <template name="work">
-  {{> navDefault}}
   <main class="section">
     {{> Template.dynamic template='listing' data='work'}}
   </main>
 </template>
 
 <template name="caseStudy">
-  {{> navDefault}}
-  {{>Template.dynamic template=getTemplateName title=title }}
-  {{> postFooter }}
+  {{>Template.dynamic template=getTemplateName }}
 </template>
 
 

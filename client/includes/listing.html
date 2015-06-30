@@ -2,8 +2,10 @@
   <table class="listing">
     <tr class="border-top"></tr>
     {{#if isWork}}
-      {{#each projects }}
-        {{> workListingItem}}
+      {{#each projects}}
+        {{#if isPublished "true"}}
+          {{> workListingItem }}
+        {{/if }}
       {{/each}}
       {{ else }}
       {{#each entries}}

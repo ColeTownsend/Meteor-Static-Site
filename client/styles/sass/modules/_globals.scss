@@ -15,11 +15,17 @@ body {
 
 // iron router
 #iron-router-progress {
-  background-color: map-get($accentcolors, pink);
-  box-shadow: 0 0 2px map-get($accentcolors, pink);
+  @include linear-gradient(90deg, darken(#EDF9FD, 5%) 10%, darken(#8CE4D0, 3%) 90%);
+  height: 4px
 }
 
 // layout utilities
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
 .clearfix {
   @include clearfix();
 }
@@ -40,6 +46,9 @@ body {
     @include breakpoint(break-2) {
       padding: 3rem 0;
     }
+  }
+   &.no-pad-top {
+    padding: 0;
   }
 }
 

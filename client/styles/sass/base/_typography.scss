@@ -42,6 +42,9 @@ a {
 .bodyfont {
   font-family: unquote(map-get($bodytype, font-family));
 }
+.bold {
+  font-weight: 700;
+}
 .regular, .typeset .regular {
   font-weight: normal;
   font-weight: 400;
@@ -54,6 +57,9 @@ a {
 }
 .mono {
   font-family: unquote(map-get($monospacetype, font-family));
+}
+.shout, .typeset .shout {
+  font-family: "Avenir","Avenir Next", "Helvetica";
 }
 
 
@@ -70,23 +76,23 @@ a {
       color: $hovercolor;
       text-decoration: none;
     }
-    &:not(.plain-link) {
-      background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkcolor,20%) 50%);
-      background-image: -moz-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkcolor,20%) 50%);
-      background-image: -o-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkcolor,20%) 50%);
-      background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($linkcolor,20%) 50%);
-      background-position: 0 93%;
-      background-repeat: repeat-x;
-      background-size: 100% 0.15rem;
-      text-shadow: 0.1rem 0 $backgroundcolor,0.15rem 0 $backgroundcolor,-0.1rem 0 $backgroundcolor,-0.15rem 0 $backgroundcolor;
+    // &:not(.plain-link) {
+    //   background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkcolor,20%) 50%);
+    //   background-image: -moz-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkcolor,20%) 50%);
+    //   background-image: -o-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkcolor,20%) 50%);
+    //   background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($linkcolor,20%) 50%);
+    //   background-position: 0 93%;
+    //   background-repeat: repeat-x;
+    //   background-size: 100% 0.15rem;
+    //   text-shadow: 0.1rem 0 $backgroundcolor,0.15rem 0 $backgroundcolor,-0.1rem 0 $backgroundcolor,-0.15rem 0 $backgroundcolor;
 
-      &:hover, &:active, &:focus {
-        background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,0%) 50%);
-        background-image: -moz-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,0%) 50%);
-        background-image: -o-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,0%) 50%);
-        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,0%) 50%);
-      }
-    }
+    //   &:hover, &:active, &:focus {
+    //     background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,0%) 50%);
+    //     background-image: -moz-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,0%) 50%);
+    //     background-image: -o-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,0%) 50%);
+    //     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,0%) 50%);
+    //   }
+    // }
   }
 
   // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
@@ -178,7 +184,8 @@ a {
 
   // Italic.
   em, i, .italic {
-    font-style: map-get($bodytype, italic);
+    position: relative;
+    background: saturate(map-get($accentcolors, yellow), 10);
   }
 
   // Caption and inline small text.
@@ -257,8 +264,8 @@ a {
     background-size: 100% 0.15rem;
     border: 0;
     margin: 0;
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
   }
 
   // Code block.
@@ -298,6 +305,23 @@ a {
     font-feature-settings: 'smcp' 1, 'kern' 1;
 
     letter-spacing: 0.1rem;
+  }
+
+  sup, .sup {
+    position: relative;
+    padding-right: 4px;
+    font-size: .75em;
+    &:after {
+      content: '*';
+      opacity: 1;
+      position: absolute;
+      display: block;
+      font-weight: bold;
+      width: 2px;
+      height: 2px;
+      top: -.9rem;
+      left: -2px;
+    }
   }
 
   // Consistent height numbers with OpenType.

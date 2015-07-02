@@ -71,7 +71,6 @@ Template.caseStudy.helpers( {
     var slug = Router.current().params.slug;
     console.log("get template fxn");
     return slug;
-
   }
 } );
 
@@ -86,8 +85,9 @@ Template.globalCaseStudy.helpers( {
     var WorkList = [{title: "Panda Jobs", template: "startup-launch-list", info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae eligendi tempore, sapiente sit expedita necessitatibus sint reprehenderit nesciunt animi quaerat!"}];
     var currentProject = Session.get( 'current-project' );
     var project = _.find( WorkList, function( project ) {
-      return project.title == 'Panda Jobs';
+      return project.template == slug();
     } );
+    console.log("This is the project: " + project);
     return project;
   }
 } );

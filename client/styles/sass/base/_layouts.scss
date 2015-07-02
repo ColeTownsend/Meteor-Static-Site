@@ -35,6 +35,17 @@
   }
 }
 
+.margin {
+  @include breakpoint(break-1) {
+      margin-left: map-get($gutterwidths, small);
+      margin-right: map-get($gutterwidths, small);
+    }
+  @include breakpoint(break-3) {
+    margin-left: map-get($gutterwidths, medium);
+    margin-right: map-get($gutterwidths, medium);
+  }
+}
+
 // Single column.
 .single {
   margin: 0 auto;
@@ -42,6 +53,10 @@
   .section-heading {
     position: absolute;
     left: -1rem;
+  }
+  &.no-pad {
+    position: relative;
+    left: -2rem;
   }
 }
 
@@ -87,6 +102,12 @@
 
   @include breakpoint(break-2) {
     width: 25%;
+  }
+}
+
+.three-quarter {
+  @include breakpoint(break-1) {
+    width: 75%;
   }
 }
 

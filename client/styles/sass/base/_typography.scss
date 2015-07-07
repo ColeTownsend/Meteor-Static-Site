@@ -117,7 +117,7 @@ a {
     color: $headingcolor;
     font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
-    font-weight: map-get($headingtype, bold);
+    font-weight: map-get($headingtype, normal);
   }
 
   // Heading level 1.
@@ -150,6 +150,11 @@ a {
   // Heading level 6.
   h6, .zeta {
     @include sassline(zeta, $headingtype, 2, 0, all);
+  }
+
+  // Heading level 7.
+  .eta {
+    @include sassline(eta, $bodytype, 2, 2, all);
   }
 
   // Lists.
@@ -204,7 +209,6 @@ a {
 
   .caption {
     color: $captioncolor;
-
     @include baseline(theta, $headingtype, 2, 2, all);
   }
 

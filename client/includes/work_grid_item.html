@@ -1,9 +1,11 @@
 <template name="gridItem">
-  <a class="{{color}}-bg flex-child medium card flex-parent fp--column fp--align-end" href="/work/{{template}}">
+  <a class="{{classes}} flex-child card flex-parent fp--column fp--align-start" href="/work/{{template}}">
     <div class="inner typeset">
-      <small class="monospace upper ">{{ type }}</small>
       <span class="faux-hr"></span>
-      <h3 class="mb0 delta">{{title}}</h3>
+      <h3 class="delta mb0">{{ info }}</h3>
+      <h6 class="monospace eta">{{ title }} &mdash; {{ date }}</h6>
     </div>
+    <span class="bg-color {{classes}} see-thru"></span>
+    <span class="bg-img" style="background-image: url('images/work/{{template}}-thumb.{{thumbFile}}')"></span>
   </a>
 </template>

@@ -11,13 +11,17 @@
       <small class="upper regular cadet-blue ">Current Status</small>
       <br>{{ cole.status }}
       <br>
+      <br>
       <small class="upper regular cadet-blue">Education</small>
       <br> {{ cole.college }}, 20{{ cole.graduation }}
       <br> Bachelor of Liberal Arts in the Arts
+      <br>
+      <br>
       <small class="upper regular cadet-blue">Projects</small>
       <br> {{#each cole.projects }}
       <a href="{{url}}">{{ name }}</a>
       <br> {{/each}}
+      <br>
       <small class="upper regular cadet-blue">Clientele</small>
       <br> {{#each cole.clients }} {{ name }}
       <br> {{/each}}

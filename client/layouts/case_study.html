@@ -2,37 +2,32 @@
   {{> navDefault}}
   <header role="hero" class="flex-parent">
     <div class="flex-child center title">
-      <img src="../images/work/{{ slug }}@2x.png" alt="Panda Network Logo" class="logo dib">
-      <h1 class="dib title">{{> yield "title" }}</h1>
+      <img src="../images/work/{{ content.logo }}.png" srcset="../images/work/{{ content.logo }}.png 1x, ../images/work/{{ content.logo }}@2x.png 2x" alt="{{ content.client }} Logo" class="logo dib">
+      <h1 class="dib title {{ content.titleColor }}">{{content.title}}</h1>
     </div>
-    <div class="hero-img" style="background-image: url('../images/work/{{ slug }}-bg-min.jpg');"></div>
+    <div class="hero-img" style="background-image: url('../images/work/{{ content.template }}-bg-min.jpg');"></div>
   </header>
   <main class="white-bg" id="baseline">
     <section class="section typeset">
       <div class="column column--sidebar">
         <p>
           <small class="upper regular cadet-blue">Client</small>
-          <br>{{> yield "client" }}
+          <br>{{content.client}}
           <br>
           <small class="upper regular cadet-blue">Challenge</small>
-          <br> {{> yield "challenge" }}
+          <br>{{content.challenge}}
         </p>
       </div>
       <div class="column column--main">
         <p>{{> yield "intro"}}</p>
-        <p>Title here: {{ getContent }} </p>
         <!-- need at least one thing here -->
       </div>
-    </section>
-    <section class="typeset section">
       {{> yield }}
     </section>
-    <section class="typset section">
+    <section class="typeset section">
       <div class="column column--main column--right">
-        <p>
-          <small class="upper regular cadet-blue">Extra Credit and Thanks</small>
-          <br> {{> yield "credits" }}
-        </p>
+        <span class="caption sidenote small-caps upper">Extra Credit and Thanks</span>
+        <p>{{> yield "credits" }}</p>
       </div>
     </section>
   </main>

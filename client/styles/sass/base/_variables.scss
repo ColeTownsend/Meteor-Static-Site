@@ -57,7 +57,7 @@ $gutterwidths: (
 // Add weight and style details too.
 // ! Set cap height to set to the baseline.
 $bodytype: (
-  font-family: 'Nitti Grotesk, Myriad Pro, Arial, sans-serif',
+  font-family: 'NittiGrotesk-SemiLight, Myriad Pro, Arial, sans-serif',
   regular: 300,
   bold: 600,
   italic: italic,
@@ -96,6 +96,7 @@ $accentcolors: (
   pink: #ff2078,
   cyan: darken(#EDF9FD, 5%),
   indigo: #2D22F2,
+  lavender: desaturate(lighten(#2D22F2,25%), 20%),
   yellow: #FBF7E6,
   navy: #162237,
   cadet-blue: desaturate(lighten(#162237,60%), 25%),

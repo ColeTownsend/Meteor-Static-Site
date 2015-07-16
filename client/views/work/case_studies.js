@@ -31,7 +31,13 @@ Template.globalCaseStudy.helpers( {
     var project = _.findWhere(work, {template: currentProject} );
     console.log("This is the project: " + project);
     return project;
-  }
+  },
+  hasLogo: function(logo) {
+    return this.logo != "none";
+  },
+  showTitle: function(showTitle) {
+    return this.showTitle != "false";
+  },
 } );
 
 // for the specific page the news, make sure there is some meta data

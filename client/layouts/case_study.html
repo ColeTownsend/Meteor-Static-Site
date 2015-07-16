@@ -2,10 +2,16 @@
   {{> navDefault}}
   <header role="hero" class="flex-parent">
     <div class="flex-child center title">
+      {{#with content }}
+      {{#if hasLogo }}
       <img src="../images/work/{{ content.logo }}.png" srcset="../images/work/{{ content.logo }}.png 1x, ../images/work/{{ content.logo }}@2x.png 2x" alt="{{ content.client }} Logo" class="logo dib">
+      {{/if}}
+      {{#if showTitle}}
       <h1 class="dib title {{ content.titleColor }}">{{content.title}}</h1>
+      {{/if}}
+      {{/with}}
     </div>
-    <div class="hero-img" style="background-image: url('../images/work/{{ content.template }}-bg-min.jpg');"></div>
+    <div class="hero-img" style="background-image: url('../images/work/{{ content.bg}}');"></div>
   </header>
   <main class="white-bg" id="baseline">
     <section class="section typeset">
@@ -20,13 +26,12 @@
       </div>
       <div class="column column--main">
         <p>{{> yield "intro"}}</p>
-        <!-- need at least one thing here -->
       </div>
       {{> yield }}
     </section>
     <section class="typeset section">
-      <div class="column column--main column--right">
-        <span class="caption sidenote small-caps upper">Extra Credit and Thanks</span>
+      <div class="column column--sidebar">
+        <span class="caption small-caps upper">Extra Credit and Thanks</span>
         <p>{{> yield "credits" }}</p>
       </div>
     </section>

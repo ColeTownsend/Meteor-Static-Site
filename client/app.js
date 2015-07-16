@@ -1,4 +1,9 @@
 if ( Meteor.isClient ) {
+  Template.registerHelper('equals',
+    function(v1, v2) {
+        return (v1 === v2);
+    }
+  );
   Template.listing.helpers( {
     isWork: function() {
       var instance = Template.instance();
@@ -120,6 +125,6 @@ if ( Meteor.isClient ) {
     }
     dynamics.setTimeout( fadeFirst(), 400 )
   };
-
-
 }
+
+

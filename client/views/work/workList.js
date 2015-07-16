@@ -20,7 +20,7 @@ WorkList = [ {
   type: 'Web Design',
   published: 'false',
   classes: 'blush-bg bigger',
-  info: 'What\'s on Ryan Hoover\'s Book Shelf?',
+  info: 'Find out what\'s on Ryan Hoover\'s Book Shelf',
   challenge: 'Create a cutting edge way to show off famous entreprenuers\' book suggestions.',
   template: "startup-book-list",
   bg: "",
@@ -37,8 +37,9 @@ WorkList = [ {
   info: 'Design the Delightful Startup Launch List',
   challenge: 'Create a web app experience that helps people conquer large reading lists.',
   template: "startup-launch-list",
+  bg: "startup-launch-list-bg-min.jpg",
   logo: 'panda',
-  thumbFile: 'jpg'
+  thumbFile: 'png'
 }, {
   title: 'The Panda Network Site',
   client: 'Panda',
@@ -50,7 +51,9 @@ WorkList = [ {
   what: 'Get educated.',
   info: 'Craft a Presence for Panda Network',
   challenge: 'Show off Panda Networks prowess and attract new collaborators.',
+
   template: "panda-network",
+  bg: "panda-network-bg-min.jpg",
   logo: 'panda',
   thumbFile: 'png'
 }, {
@@ -58,13 +61,17 @@ WorkList = [ {
   type: 'iOS Design',
   published: 'true',
   date: '10 2014',
-  classes: 'pink-bg smaller',
+  classes: 'blush-bg smaller',
   client: 'Goodrich Coffee',
   what: 'Order up!',
   info: 'Calm the Coffee Order Chaos',
+  challenge: 'Speed up and organize Goodrich Coffee Bar orders.',
+
   template: "goodrich-swipes",
-  bg: "gc-swipes-bg.png",
-  thumbFile: 'jpg'
+  logo: "none",
+  showTitle: "false",
+  bg: "gc-swipes-bg-min.png",
+  thumbFile: 'png'
 
 }, {
   title: 'TheNews App for iOS',
@@ -72,10 +79,12 @@ WorkList = [ {
   type: 'iOS Design',
   date: '10 2014',
   published: 'true',
-  classes: 'indigo-bg bigger',
-  what: 'Feeds on swipe.',
-  info: 'Make TheNews App Native',
+  classes: 'lavender-bg bigger',
+  what: 'Feeds at your fingertips',
+  info: 'Feeds at your fingertips',
+  challenge: 'Create a native iOS experience for TheNews.',
   template: "thenews",
   logo: 'panda',
-  thumbFile: 'jpg'
+  bg: "thenews-app-bg.png",
+  thumbFile: 'png'
 }, ];

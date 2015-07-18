@@ -53,8 +53,9 @@ WorkList = [ {
   challenge: 'Show off Panda Networks prowess and attract new collaborators.',
 
   template: "panda-network",
+  showTitle: "false",
+  logo: "false",
   bg: "panda-network-bg-min.jpg",
-  logo: 'panda',
   thumbFile: 'png'
 }, {
   title: 'Goodrich Swipes',
@@ -68,7 +69,7 @@ WorkList = [ {
   challenge: 'Speed up and organize Goodrich Coffee Bar orders.',
 
   template: "goodrich-swipes",
-  logo: "none",
+  logo: "false",
   showTitle: "false",
   bg: "gc-swipes-bg-min.png",
   thumbFile: 'png'
@@ -84,7 +85,8 @@ WorkList = [ {
   info: 'Feeds at your fingertips',
   challenge: 'Create a native iOS experience for TheNews.',
   template: "thenews",
-  logo: 'panda',
+  logo: 'false',
+  showTitle: "false",
   bg: "thenews-app-bg.png",
   thumbFile: 'png'
 }, ];

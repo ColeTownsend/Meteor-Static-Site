@@ -33,7 +33,7 @@ Template.globalCaseStudy.helpers( {
     return project;
   },
   hasLogo: function(logo) {
-    return this.logo != "none";
+    return this.logo != "false";
   },
   showTitle: function(showTitle) {
     return this.showTitle != "false";

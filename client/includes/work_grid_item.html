@@ -6,6 +6,6 @@
       <h6 class="monospace eta">{{ title }} &mdash; {{ date }}</h6>
     </div>
     <span class="bg-color {{classes}} see-thru"></span>
-    <span class="bg-img" style="background-image: url('images/work/{{template}}-thumb.{{thumbFile}}')"></span>
+    <span class="bg-img" style="background-image: url('{{ urlFor 'home' }}/images/work/{{template}}-thumb.{{thumbFile}}')"></span>
   </a>
 </template>

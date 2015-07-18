@@ -1,7 +1,7 @@
 if ( Meteor.isClient ) {
   Template.registerHelper('equals',
-    function(v1, v2) {
-        return (v1 === v2);
+    function(a, b) {
+        return (a === b);
     }
   );
   Template.listing.helpers( {

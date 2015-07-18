@@ -1,11 +1,9 @@
 // Typography
 // ---------------------------------------
-
 // Setting root sizes and base styles.
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-
   @include rootsize;
 }
 
@@ -25,11 +23,11 @@ a {
   -ms-transition: color .1s, background-color .1s;
   -o-transition: color .1s, background-color .1s;
   transition: color .1s, background-color .1s;
-
   color: $linkcolor;
   text-decoration: none;
-
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     color: map-get($accentcolors, map-get($oppositecolors, pink));
     text-decoration: none;
   }
@@ -39,40 +37,50 @@ a {
 .headerfont {
   font-family: unquote(map-get($headingtype, font-family));
 }
+
 .bodyfont {
   font-family: unquote(map-get($bodytype, font-family));
 }
+
 .bold {
   font-weight: 700;
 }
-.regular, .typeset .regular {
+
+.regular,
+.typeset .regular {
   font-weight: normal;
   font-weight: 400;
 }
-.semilight, .typeset .semilight {
+
+.semilight,
+.typeset .semilight {
   font-weight: unquote(map-get($bodytype, font-weight));
 }
-.light, .typeset .light {
+
+.light,
+.typeset .light {
   font-weight: 200;
 }
+
 .mono {
   font-family: unquote(map-get($monospacetype, font-family));
 }
-.shout, .typeset .shout {
-  font-family: "Avenir","Avenir Next", "Helvetica";
+
+.shout,
+.typeset .shout {
+  font-family: "Avenir", "Avenir Next", "Helvetica";
 }
-
-
 
 // Styles for typeset text.
 .typeset {
-
   // Nice underlines for text links.
-  p a, li a {
+  p a,
+  li a {
     color: $linkcolor;
     text-decoration: none;
-
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
       color: $hovercolor;
       text-decoration: none;
     }
@@ -85,7 +93,6 @@ a {
     //   background-repeat: repeat-x;
     //   background-size: 100% 0.15rem;
     //   text-shadow: 0.1rem 0 $backgroundcolor,0.15rem 0 $backgroundcolor,-0.1rem 0 $backgroundcolor,-0.15rem 0 $backgroundcolor;
-
     //   &:hover, &:active, &:focus {
     //     background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,0%) 50%);
     //     background-image: -moz-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hovercolor,0%) 50%);
@@ -94,7 +101,6 @@ a {
     //   }
     // }
   }
-
   // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
   p {
     -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
@@ -102,76 +108,78 @@ a {
     -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-
     @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
   }
-
   // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-
     color: $headingcolor;
     font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
     font-weight: map-get($headingtype, normal);
   }
-
   // Heading level 1.
-  h1, .alpha {
+  h1,
+  .alpha {
     @include sassline($fontsize: alpha, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
     font-weight: map-get($headingtype, regular);
   }
-
   // Heading level 2.
-  h2, .beta {
+  h2,
+  .beta {
     @include sassline(beta, $headingtype, 3, 1, all);
     font-weight: map-get($headingtype, regular);
   }
-
   // Heading level 3.
-  h3, .gamma {
+  h3,
+  .gamma {
     @include sassline(gamma, $headingtype, 3, 1, all);
   }
-
   // Heading level 4.
-  h4, .delta {
+  h4,
+  .delta {
     @include sassline(delta, $headingtype, 2, 0, all);
   }
-
   // Heading level 5.
-  h5, .epsilon {
+  h5,
+  .epsilon {
     @include sassline(epsilon, $headingtype, 2, 0, all);
   }
-
   // Heading level 6.
-  h6, .zeta {
+  h6,
+  .zeta {
     @include sassline(zeta, $headingtype, 2, 0, all);
   }
-
   // Heading level 7.
   .eta {
     @include sassline(eta, $bodytype, 2, 2, all);
   }
-
   // Lists.
-  ul, ol {
+  ul,
+  ol {
     @include baseline(zeta, $bodytype, 2, 2, all);
-
     li {
       -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
       -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
       -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
       -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
       font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-
       margin-left: 2rem;
-
+      padding-left: 1rem;
+      position: relative;
+      // special dots
       @include breakpoint(break-1) {
-        margin-left: 0;
+        margin-left: 1rem;
+        padding-left: .5rem;
       }
     }
     &.unstyled {
@@ -181,88 +189,109 @@ a {
       }
     }
   }
-
+  ul {
+    list-style-type: none;
+    li {
+      &:before {
+        content: '';
+        width: 1px;
+        height: 10px;
+        left: -0.5rem;
+        position: absolute;
+        top: calc(1rem - 5px);
+        background: map-get($accentcolors, cadet-blue);
+        @include transform(rotate(-45deg));
+      }
+      &:after {
+        content: '';
+        width: 1px;
+        height: 10px;
+        left: -0.5rem;
+        position: absolute;
+        top: calc(1rem - 5px);
+        background: map-get($accentcolors, cadet-blue);
+        @include transform(rotate(45deg));
+      }
+    }
+  }
   // Bold.
-  b, strong, .bold {
+  b,
+  strong,
+  .bold {
     font-weight: map-get($bodytype, bold);
   }
-
   // Italic.
-  em, i, .italic {
+  em,
+  i,
+  .italic {
     position: relative;
     background: saturate(map-get($accentcolors, yellow), 10);
   }
-
   // Caption and inline small text.
-  small, .caption {
+  small,
+  .caption {
     font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
     font-weight: 400;
     color: $captioncolor;
-
     @include fontsize(theta, all);
   }
-
   small {
     line-height: 1rem;
   }
-
   .caption {
     color: $captioncolor;
     @include baseline(theta, $headingtype, 2, 2, all);
   }
-
   // Nice spacing for captions.
-  h1 + .caption, .alpha + .caption, h2 + .caption, .beta + .caption, h3 + .caption, .gamma + .caption {
+  h1 + .caption,
+  .alpha + .caption,
+  h2 + .caption,
+  .beta + .caption,
+  h3 + .caption,
+  .gamma + .caption {
     margin-top: -1rem;
   }
-
-  .delta + .caption, .epsilon + .caption, .zeta + .caption {
+  .delta + .caption,
+  .epsilon + .caption,
+  .zeta + .caption {
     margin-top: 0rem;
   }
-
   // Quotes.
   blockquote {
-
     p {
       border-left: 0.15rem solid $linkcolor;
       font-style: map-get($bodytype, italic);
       padding-left: 1rem;
-
       // Add spacing below blockquote paragraphs to align to baseline grid.
       $get-scale: map-get($modular-scale, scale-0);
       $get-size: map-get($get-scale, zeta);
       $rootsize: nth($sizes, 1);
       $baseline-shift: #{($get-size / 2 * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001};
       $baseline-push: #{3 - (($get-size * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001)};
-
       margin-bottom: #{$baseline-push}rem;
       padding-bottom: #{$baseline-shift}rem;
-
       @for $i from 2 through $breakpoints-limit {
         $get-scale: map-get($modular-scale, scale-#{$i - 1});
         $get-size: map-get($get-scale, zeta);
         $rootsize: nth($sizes, $i);
         $baseline-shift: #{($get-size / 2 * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001};
         $baseline-push: #{3 - (($get-size * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001)};
-
-        @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
+        @media screen and (min-width: nth($points, $i) / 16 * 1em) {
           margin-bottom: #{$baseline-push}rem;
           padding-bottom: #{$baseline-shift}rem;
         }
       }
     }
-
     @include breakpoint(break-1) {
       margin-left: -1rem;
     }
   }
-
   // Horizontal rule.
   hr {
-    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0, 0, 0, 0)),to($captioncolor));
-    background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,$captioncolor 50%);
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$captioncolor 50%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to($captioncolor));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, $captioncolor 50%);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, $captioncolor 50%);
     background-position: 0 50%;
     background-repeat: repeat-x;
     background-size: 100% 0.15rem;
@@ -271,14 +300,13 @@ a {
     padding-bottom: 2rem;
     padding-top: 2rem;
   }
-
   // Code block.
-  code, pre {
+  code,
+  pre {
     background-color: $codeBackgroundcolor;
     font-family: unquote(map-get($monospacetype, font-family));
     color: map-get($accentcolors, yellow) !important;
   }
-
   pre {
     display: block;
     margin-bottom: 2rem;
@@ -288,18 +316,15 @@ a {
     word-break: break-all;
     word-wrap: break-word;
   }
-
   code {
     line-height: 1rem;
     @include fontsize(theta, all);
   }
-
   // Letter space those capitals people, Jan Tschichold would be proud.
   .upper {
     letter-spacing: 0.1rem;
     text-transform: uppercase;
   }
-
   // Real small caps.
   .small-caps {
     -webkit-font-feature-settings: 'smcp' 1, 'kern' 1;
@@ -307,11 +332,10 @@ a {
     -ms-font-feature-settings: 'smcp' 1, 'kern' 1;
     -o-font-feature-settings: 'smcp' 1, 'kern' 1;
     font-feature-settings: 'smcp' 1, 'kern' 1;
-
     letter-spacing: 0.1rem;
   }
-
-  sup, .sup {
+  sup,
+  .sup {
     position: relative;
     padding-right: 4px;
     font-size: .75em;
@@ -327,7 +351,6 @@ a {
       left: -2px;
     }
   }
-
   // Consistent height numbers with OpenType.
   .lining-numerals {
     -webkit-font-feature-settings: 'lnum' 1, 'kern' 1;
@@ -336,7 +359,6 @@ a {
     -o-font-feature-settings: 'lnum' 1, 'kern' 1;
     font-feature-settings: 'lnum' 1, 'kern' 1;
   }
-
   // Ascending and descending numbers with OpenType.
   .oldstyle-numerals {
     -webkit-font-feature-settings: 'onum' 1, 'kern' 1;

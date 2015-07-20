@@ -23,18 +23,16 @@
           <small class="upper regular cadet-blue">Challenge</small>
           <br>{{content.challenge}}
         </p>
+        {{#if hasCredits}}
+          <span class="caption small-caps upper">Extra Credit and Thanks</span>
+          <p>{{ content.credits }}</p>
+        {{/if}}
       </div>
       <div class="column column--main">
         <p>{{> yield "intro"}}</p>
       </div>
       {{> yield }}
     </section>
-    <section class="typeset section">
-      <div class="column column--sidebar">
-        <span class="caption small-caps upper">Extra Credit and Thanks</span>
-        <p>{{> yield "credits" }}</p>
-      </div>
-    </section>
   </main>
-  {{> postFooter }}
+<!--   {{> postFooter }} -->
 </template>

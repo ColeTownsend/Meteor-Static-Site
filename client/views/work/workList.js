@@ -37,6 +37,7 @@ WorkList = [ {
   info: 'Design the Delightful Startup Launch List',
   challenge: 'Create a web app experience that helps people conquer large reading lists.',
   template: "startup-launch-list",
+  credits: "Adrien Le Bas for precision implementation.",
   bg: "startup-launch-list-bg-min.jpg",
   logo: 'panda',
   thumbFile: 'png'
@@ -51,7 +52,7 @@ WorkList = [ {
   what: 'Get educated.',
   info: 'Craft a Presence for Panda Network',
   challenge: 'Show off Panda Networks prowess and attract new collaborators.',
-
+  credits: "Ahmet Sulek for a delightful implementation.",
   template: "panda-network",
   showTitle: "false",
   logo: "false",
@@ -67,7 +68,7 @@ WorkList = [ {
   what: 'Order up!',
   info: 'Calm the Coffee Order Chaos',
   challenge: 'Speed up and organize Goodrich Coffee Bar orders.',
-
+  credits: "false",
   template: "goodrich-swipes",
   logo: "false",
   showTitle: "false",
@@ -84,6 +85,7 @@ WorkList = [ {
   what: 'Feeds at your fingertips',
   info: 'Feeds at your fingertips',
   challenge: 'Create a native iOS experience for TheNews.',
+  credits: "Thank you to Tosin Afolabi for making implementing my design a breeze.",
   template: "thenews",
   logo: 'false',
   showTitle: "false",

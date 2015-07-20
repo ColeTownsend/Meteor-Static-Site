@@ -38,6 +38,9 @@ Template.globalCaseStudy.helpers( {
   showTitle: function(showTitle) {
     return this.showTitle != "false";
   },
+  hasCredits: function(hasCredits) {
+    return this.credits != "false";
+  },
 } );
 
 // for the specific page the news, make sure there is some meta data

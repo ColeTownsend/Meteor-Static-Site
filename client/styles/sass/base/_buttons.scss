@@ -1,0 +1,22 @@
+.button {
+  height: 2rem;
+  min-width: 4rem;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 0 12px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: unquote(map-get($bodytype, font-family));
+  @include fontsize(zeta, all);
+  &:hover {
+    cursor: pointer;
+    cursor: hand;
+  }
+  // colors
+  &.btn--white {
+    box-shadow: rgba(218, 225, 230, 0.2) 0px -2px 6px 0px inset, rgba(90, 101, 112, 0.0470588) 0px 0px 0px 1px, rgba(90, 101, 112, 0.219608) 0px 1px 2px 0px;
+    display: inline-block;
+    opacity: 1;
+    outline-color: rgb(41, 46, 49);
+  }
+}

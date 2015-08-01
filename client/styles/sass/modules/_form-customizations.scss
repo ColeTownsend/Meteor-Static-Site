@@ -410,6 +410,11 @@ $listChoiceItem: block;
     line-height: 1.3em;
     padding-bottom: 0.5em;
     display: $listChoiceItem;
+    list-style: none;
+    list-style-type: none !important;
+    &:before, &:after {
+      display: none;
+    }
   }
   .ss-required-asterisk {
     color: $error;

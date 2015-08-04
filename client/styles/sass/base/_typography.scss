@@ -34,6 +34,11 @@ a {
 }
 
 // utility classes
+
+.hr--narrow {
+  display: none;
+}
+
 .headerfont {
   font-family: unquote(map-get($headingtype, font-family));
 }
@@ -329,6 +334,7 @@ a {
     padding-bottom: 2rem;
     padding-top: 2rem;
   }
+
   // Code block.
   code,
   pre {

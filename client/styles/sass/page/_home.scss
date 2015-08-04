@@ -57,7 +57,12 @@ main.section {
 }
 footer[role="main-footer"] {
   width: 100%;
-  border-top: 1px solid black;
   text-align: center;
   height: 80px;
+  span {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    @include fontsize(theta, all);\
+    font-weight: 400;
+  }
 }

@@ -3,12 +3,12 @@
   <header role="hero" class="flex-parent">
     <div class="flex-child center title">
       {{#with content }}
-      {{#if hasLogo }}
-      <img src="../images/work/{{ content.logo }}.png" srcset="../images/work/{{ content.logo }}.png 1x, ../images/work/{{ content.logo }}@2x.png 2x" alt="{{ content.client }} Logo" class="logo dib">
-      {{/if}}
-      {{#if showTitle}}
-      <h1 class="dib title {{ content.titleColor }}">{{content.title}}</h1>
-      {{/if}}
+        {{#if hasLogo }}
+          <img src="../images/work/{{ content.logo }}.png" srcset="../images/work/{{ content.logo }}.png 1x, ../images/work/{{ content.logo }}@2x.png 2x" alt="{{ content.client }} Logo" class="logo dib">
+        {{/if}}
+        {{#if showTitle}}
+          <h1 class="dib title {{ content.titleColor }}">{{content.title}}</h1>
+        {{/if}}
       {{/with}}
     </div>
     <div class="hero-img" style="background-image: url('../images/work/{{ content.bg}}');"></div>
@@ -34,5 +34,9 @@
       {{> yield }}
     </section>
   </main>
-<!--   {{> postFooter }} -->
+  <!--   {{> postFooter }} -->
+  <footer role="main-footer" class="flex-parent fp--row fp--fill-space">
+    <hr class="hr--narrow">
+    <span class="flex-child fc--center">© <small>Cole Townsend in 🇺🇸 </small></span>
+  </footer>
 </template>

@@ -1,12 +1,19 @@
 <template name="journalListingItem">
   <tr class="flex-parent fp--row fp--align-start fp--baseline typeset">
       <td class="flex-child list-title ">
-        <p class="zeta"><a class="zeta plain-link" href='/work/{{template}}'>{{title}}</a></p>
+        <p class="zeta"><a class="zeta plain-link headerfont normal" href='/work/{{template}}'>{{title}}</a><span class="cadet-blue"><br>{{subtitle}}<br>{{date}}</span></p>
       </td>
       <td class="column flex-child fc--end  column--right--marginless">
         <div class="hover large-bg" style="background-image: url('images/work/panda-jobs-bg-min.jpg')"></div>
         <p class="zeta">{{info}}
-          <br><a href='/work/{{template}}'>Read case study</a></p>
+          <br>
+          {{#if equals postType "link" }}
+            <a href='{{link}}' target="_blank">Link to page</a>
+          {{/if}}
+          {{#if equals postType "post" }}
+            <a href='/journal/{{template}}'>Read post</a>
+          {{/if}}
+          </p>
       </td>
     </tr>
 </template>

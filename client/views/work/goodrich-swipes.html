@@ -1,10 +1,9 @@
 <template name="goodrich-swipes">
-{{> caseStudyHeader title="Goodrich Swipes" }}
-<section class="section typeset">
-{{> caseStudyInfo client="Panda Network" challenge="This is where challenge info should go. It should be a couple lines ot text. Right now the data context is a little wonky." }}
-<div class="column column--main">
+{{#contentFor "intro"}}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ratione iusto doloribus laudantium aspernatur non soluta error rem quia asperiores.
+{{/contentFor}}
+<div class="column column--main column--right">
 {{#markdown}}
-
 # Introducing Fast Render
 
 Meteor is supercool when it comes to productivity and building real-time web apps very quickly. But one of the common issues with Meteor is page load time: you have to wait until a WebSocket connection is made and data comes from the server. This is a crucial issue for many apps, especially forums, blogs and public-facing web apps.
@@ -55,5 +54,4 @@ Don't take my word for it. Try it out with your app: I bet you'll love it. I'd a
 
 {{/markdown}}
 </div>
-</section>
 </template>

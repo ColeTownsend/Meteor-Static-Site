@@ -417,3 +417,9 @@ $max-widths: map-values($maxwidths);
     clear: both;
   }
 }
+
+// color
+@mixin hex-to-rgba($hexcolor, $opacity) {
+  background-color: $hexcolor;
+  background-color: rgba($hexcolor, $opacity);
+}

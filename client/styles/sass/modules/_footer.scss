@@ -7,6 +7,7 @@ footer {
     margin-right: -1px;
     &:hover {
       @include transform(translate3d(0.5rem, -0.5rem, 2px));
+      z-index: 100;
     }
   }
   .right {
@@ -14,6 +15,7 @@ footer {
     margin-left: -1px;
     &:hover {
       @include transform(translate3d(-0.5rem, -0.5rem, 2px));
+      z-index: 100;
     }
   }
   .divider {

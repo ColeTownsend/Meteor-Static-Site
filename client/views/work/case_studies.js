@@ -1,58 +1,4 @@
-WorkList = [ {
-  title: 'Panda Jobs',
-  client: 'Panda Network',
-  type: 'Web Design',
-  published: 'false',
-  color: 'cyan',
-  what: 'A job board made for designers.',
-  info: 'A tie is an alarm from the right perspective. They were lost without the scirrhous tyvek that composed their panther. A torose eyeliner\'s wheel comes with it the thought that the riteless crack is a brown.',
-  template: "panda-jobs"
-}, {
-  title: 'Startup Book List',
-  client: 'Panda Network',
-  type: 'Web Design',
-  published: 'false',
-  color: 'blush',
-  what: 'Ryan Hoover\'s Book Shelf.',
-  info: 'A tie is an alarm from the right perspective. They were lost without the scirrhous tyvek that composed their panther. A torose eyeliner\'s wheel comes with it the thought that the riteless crack is a brown.',
-  template: "startup-book-list"
-}, {
-  title: 'Startup Launch List',
-  client: 'Panda Network',
-  type: 'Web Design',
-  published: 'true',
-  color: 'green',
-  what: 'Get educated.',
-  info: 'A tie is an alarm from the right perspective. They were lost without the scirrhous tyvek that composed their panther. A torose eyeliner\'s wheel comes with it the thought that the riteless crack is a brown.',
-  template: "startup-launch-list"
-}, {
-  title: 'Panda Network',
-  client: 'Panda Network',
-  type: 'Web Design',
-  published: 'true',
-  color: 'cyan',
-  what: 'Get educated.',
-  info: 'A tie is an alarm from the right perspective. They were lost without the scirrhous tyvek that composed their panther. A torose eyeliner\'s wheel comes with it the thought that the riteless crack is a brown.',
-  template: "panda-network"
-}, {
-  title: 'Swipes',
-  type: 'iOS Design',
-  published: 'true',
-  color: 'pink',
-  client: 'Goodrich Coffee',
-  what: 'Order up!',
-  info: 'This is a short little snipped of info about this work!',
-  template: "goodrich-swipes"
-}, {
-  title: 'TheNews App',
-  client: 'Panda Network',
-  type: 'iOS Design',
-  published: 'true',
-  color: 'indigo',
-  what: 'Feeds on swipe.',
-  info: 'This is a short little snipped of info about this work!',
-  template: "thenews"
-}, ];
+// anything that uses case study data
 
 Template.listing.helpers( {
   isPublished: function( published ) {
@@ -70,29 +16,35 @@ Template.caseStudy.helpers( {
   getTemplateName: function() {
     var slug = Router.current().params.slug;
     return slug;
+  }
+} );
+
+// populating the global case study template
+Template.globalCaseStudy.helpers( {
+  slug: function() {
+    var slug = Router.current().params.slug;
+    return slug;
   },
   content: function() {
-    var works = WorkList;
+    var work = WorkList;
     var currentProject = Session.get( 'current-project' );
-    var project = _.find( works, function( project ) {
-      return project.title == 'Panda Jobs';
-    } );
+    var project = _.findWhere(work, {template: currentProject} );
+    console.log("This is the project: " + project);
     return project;
-  }
+  },
+  hasLogo: function(logo) {
+    return this.logo != "false";
+  },
+  showTitle: function(showTitle) {
+    return this.showTitle != "false";
+  },
+  hasCredits: function(hasCredits) {
+    return this.credits != "false";
+  },
 } );
 
-Template.globalCaseStudy.helpers( {
-  getSlug: function() {
-    var slug = Router.current().params.slug;
-    console.log( slug )
-    return slug
-  }
-} );
-
-
+// for the specific page the news, make sure there is some meta data
 Template.thenews.rendered = function() {
-  console.log( "hello!" );
-
   function itunesMeta() {
     var meta = document.createElement( 'meta' );
     meta.name = "apple-itunes-app"

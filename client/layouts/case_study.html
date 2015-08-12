@@ -2,34 +2,41 @@
   {{> navDefault}}
   <header role="hero" class="flex-parent">
     <div class="flex-child center title">
-      <img src="../images/work/{{ getSlug }}@2x.png" alt="Panda Network Logo" class="logo dib">
-      <h1 class="dib title">{{> yield "title" }}</h1>
+      {{#with content }}
+        {{#if hasLogo }}
+          <img src="../images/work/{{ content.logo }}.png" srcset="../images/work/{{ content.logo }}.png 1x, ../images/work/{{ content.logo }}@2x.png 2x" alt="{{ content.client }} Logo" class="logo dib">
+        {{/if}}
+        {{#if showTitle}}
+          <h1 class="dib title {{ content.titleColor }}">{{content.title}}</h1>
+        {{/if}}
+      {{/with}}
     </div>
-    <div class="hero-img" style="background-image: url('../images/work/{{ getSlug }}-bg-min.jpg');"></div>
+    <div class="hero-img" style="background-image: url('../images/work/{{ content.bg}}');"></div>
   </header>
-  <section class="white-bg" id="baseline">
-    <div class="section typeset">
+  <main class="white-bg" id="baseline">
+    <section class="section typeset">
       <div class="column column--sidebar">
         <p>
           <small class="upper regular cadet-blue">Client</small>
-          <br>{{> yield "client" }}
+          <br>{{content.client}}
           <br>
           <small class="upper regular cadet-blue">Challenge</small>
-          <br> {{> yield "challenge" }}
+          <br>{{content.challenge}}
         </p>
+        {{#if hasCredits}}
+          <span class="caption small-caps upper">Extra Credit and Thanks</span>
+          <p>{{ content.credits }}</p>
+        {{/if}}
       </div>
       <div class="column column--main">
         <p>{{> yield "intro"}}</p>
-        <!-- need at least one thing here -->
       </div>
       {{> yield }}
-      <div class="column column--main column--right">
-        <p>
-          <small class="upper regular cadet-blue">Extra Credit and Thanks</small>
-          <br> {{> yield "credits" }}
-        </p>
-      </div>
-    </div>
-  </section>
-  {{> postFooter }}
+    </section>
+  </main>
+  <!--   {{> postFooter }} -->
+  <footer role="main-footer" class="flex-parent fp--row fp--fill-space">
+    <hr class="hr--narrow">
+    <span class="flex-child fc--center">© <small>Cole Townsend in 🇺🇸 </small></span>
+  </footer>
 </template>

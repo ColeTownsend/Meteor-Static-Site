@@ -1,0 +1,9 @@
+<template name="journal">
+  <main class="section">
+    {{> Template.dynamic template='listing' data='journal'}}
+  </main>
+</template>
+
+<template name="journalPost">
+  {{>Template.dynamic template=getTemplateName}}
+</template>

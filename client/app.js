@@ -1,4 +1,9 @@
 if ( Meteor.isClient ) {
+  Template.registerHelper('equals',
+    function(a, b) {
+        return (a === b);
+    }
+  );
   Template.listing.helpers( {
     isWork: function() {
       var instance = Template.instance();
@@ -48,8 +53,8 @@ if ( Meteor.isClient ) {
     setTimeout( show(), 400 )
   };
 
-  Template.workGrid.rendered = function() {
-    var gridItems = document.querySelectorAll( '.grid .card' )
+  Template.home.rendered = function() {
+    var gridItems = document.querySelectorAll( '.grid .card' );
     var i = 0;
     console.log( 'If you\'re reading this its too late. The animation happened.' )
 
@@ -75,10 +80,51 @@ if ( Meteor.isClient ) {
           frequency: 200,
           friction: 300,
           duration: 800,
-          delay: 80 + i * 80
+          delay: 800 + i * 80
         } )
       }
     };
-    setTimeout( bubble(), 200 )
+    dynamics.setTimeout( bubble(), 200 )
+
+    function fader() {
+      var cta = document.querySelector( '.fader' );
+      dynamics.css( cta, {
+          opacity: 0,
+          translateY: ".5rem"
+        } )
+        // Animate to final properties
+      dynamics.animate( cta, {
+        // scale: 1,
+        opacity: 1,
+        translateY: 0
+      }, {
+        type: dynamics.easeInOut,
+        friction: 250,
+        duration: 400,
+        delay: 400
+      } )
+    }
+    dynamics.setTimeout( fader(), 400 )
+
+    function fadeFirst() {
+      var text = document.querySelector( '.fadeFirst' );
+      dynamics.css( text, {
+          opacity: 0,
+          translateY: "-.5rem"
+        } )
+        // Animate to final properties
+      dynamics.animate( text, {
+        // scale: 1,
+        opacity: 1,
+        translateY: 0
+      }, {
+        type: dynamics.easeInOut,
+        friction: 250,
+        duration: 600,
+      } )
+    }
+    dynamics.setTimeout( fadeFirst(), 400 )
   };
 }
+
+

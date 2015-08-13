@@ -62,7 +62,7 @@ footer[role="main-footer"] {
   span {
     text-transform: uppercase;
     letter-spacing: 2px;
-    @include fontsize(theta, all);\
+    @include fontsize(theta, all);
     font-weight: 400;
   }
 }

@@ -18,11 +18,6 @@
   }
 }
 
-// removes padding
-.no-padv {
-  padding-top: 0;
-  padding-bottom: 0;
-}
 // mimics padding of columns to align stuff
 .padded {
   @include breakpoint(break-1) {

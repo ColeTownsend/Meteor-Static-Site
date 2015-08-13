@@ -11,6 +11,7 @@
 @import "base/layouts";
 @import "base/flexbox";
 @import "base/buttons";
+@import "base/utilities";
 
 // Import all SCSS modules with Sass globbing.
 @import "modules/_globals";
@@ -19,15 +20,15 @@
 @import "modules/_listing";
 @import "modules/_header";
 @import "modules/_footer";
-@import "modules/_google-form-defaults";
-@import "modules/_form-customizations";
+@import "modules/_inputs";
+@import "modules/_cards";
 
 @import "page/home";
 @import "page/case-study";
 @import "page/about";
 
 html {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 // Demo baseline grid styles.

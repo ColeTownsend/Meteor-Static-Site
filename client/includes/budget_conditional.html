@@ -1,0 +1,16 @@
+<template name="budgetConditional">
+  {{#if equals budget "$500-$1000"}}
+  {{>emojione ':moneybag:'}}<br>
+  We're going to make something great together.
+  {{/if}}
+
+  {{#if equals budget "$1000-$5000"}}
+  {{>emojione ":moneybag:"}}{{>emojione ":moneybag:"}}<br>
+  With this sort of budget, we have a lot of flexibility. Prepare for a home run.
+  {{/if}}
+
+  {{#if equals budget "$5000+"}}
+  {{>emojione ":moneybag:"}}{{>emojione ":moneybag:"}}{{>emojione ":moneybag:"}} <br>
+  Sky's the limit. Excited to hear more about this!
+  {{/if}}
+</template>

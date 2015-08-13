@@ -1,22 +1,117 @@
-.button {
-  height: 2rem;
-  min-width: 4rem;
-  border-radius: 3px;
+ // Whites
+$white: #ffffff;
+$off-white: #FAFBFC;
+$purple-white: #F7F5FA;
+
+// Greys
+$light-grey: #EAEAEA;
+
+// Navies
+$darkest-navy: #2E3138;
+$dark-navy: #565C69;
+$navy: #505561;
+$light-navy: #898E98;
+$lightest-navy: #F5F6F7;
+$transparent-navy: rgba(157,162,172, .5);
+
+
+// Purples
+$dark-purple: #6A539B;
+$purple: #8D78B8;
+$light-purple: #B199E0;
+$lightest-purple: #F1EDF7;
+
+.btn, button {
+  height: 30px;
+  padding: 0 14px;
+  line-height: 30px;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  text-align: center;
   display: inline-block;
-  padding: 0 12px;
+  font-family: unquote(map-get($headingtype, font-family));
+  @include fontsize(eta, all);
   cursor: pointer;
   cursor: hand;
-  font-family: unquote(map-get($bodytype, font-family));
-  @include fontsize(zeta, all);
-  &:hover {
-    cursor: pointer;
-    cursor: hand;
+  text-decoration: none;
+  font-weight: 300;
+  &.btn--small {
+    width: 90px;
   }
-  // colors
-  &.btn--white {
-    box-shadow: rgba(218, 225, 230, 0.2) 0px -2px 6px 0px inset, rgba(90, 101, 112, 0.0470588) 0px 0px 0px 1px, rgba(90, 101, 112, 0.219608) 0px 1px 2px 0px;
-    display: inline-block;
-    opacity: 1;
-    outline-color: rgb(41, 46, 49);
+  &.btn--medium {
+    width: 160px;
+    height: 2em;
+    @include fontsize(zeta, all);
   }
+}
+
+// white
+.btn--white {
+  color: $purple;
+  font-size: 14px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px 0px rgba(134, 124, 156, 0.15), inset 0px 0px 0px 1px #E9E5EF, inset 0px -2px 5px 0px rgba(181, 169, 205, 0.15);
+  // upvote white button
+  &:active {
+    color: $light-purple;
+    background: #F4F2F7;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.15), inset 0px 1px 0px 0px #E6E1F0, inset 0px 0px 0px 1px #ECE9F2, inset 0px 0px 0px 1px rgba(181, 169, 205, 0.15);
+  }
+  &:disabled,
+  &.disabled {
+    color: $transparent-navy;
+    background: #F7F7F7;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.15), inset 0px 1px 0px 0px #F0F0F0, inset 0px 0px 0px 1px #EBEBEB, inset 0px 0px 0px 1px rgba(181, 169, 205, 0.15);
+    &.upvote > .arrow {
+      @include triangle(9px, $transparent-navy, up);
+    }
+  }
+}
+
+.btn--purple {
+  cursor: pointer;
+  cursor: hand;
+  background: $light-purple;
+  box-shadow: 0px 1px 2px 0px rgba(120, 99, 166, 0.40), inset 0px 0px 0px 1px rgba(107, 84, 156, 0.16), inset 0px -2px 5px 0px rgba(92, 77, 128, 0.30);
+  color: $white;
+  &:active {
+    background: $purple;
+    box-shadow: 0px 1px 0px 0px #FFFFFF, inset 0px 1px 0px 0px lighten(#614C8C, 10%), inset 0px 0px 0px 1px lighten(#5F4E82, 10%);
+  }
+  &:disabled {
+    background: #C8BCDF;
+    box-shadow: 0px 1px 0px 0px #FFFFFF, inset 0px 0px 0px 1px #AEA0CC;
+    color: #EBE8F2;
+    &:hover {
+      color: $white;
+      background: #C8BCDF;
+      box-shadow: 0px 1px 0px 0px #FFFFFF, inset 0px 0px 0px 1px #AEA0CC;
+    }
+  }
+}
+
+.btn--blue {
+  background: #55ACEE;
+  box-shadow: 0px 1px 2px 0px rgba(9, 81, 140, 0.35), inset 0px 0px 0px 1px rgba(64, 128, 178, 0.30), inset 0px -2px 5px 0px rgba(46, 119, 178, 0.40);
+  color: $white;
+  &:active {
+    background: #4C99D4;
+    box-shadow: 0px 1px 0px 0px #FFFFFF, inset 0px 0px 0px 1px rgba(62, 122, 171, 0.70), inset 0px 1px 0px 0px rgba(39, 102, 153, 0.40);
+    border-radius: 4px;
+  }
+  &.disabled, &:disabled {
+    background: #4C99D4;
+    box-shadow: 0px 1px 0px 0px #FFFFFF, inset 0px 0px 0px 1px #4C99D4;
+    color: #89BFE8;
+  }
+  &.mb {
+    margin-bottom: 15px;
+  }
+}
+
+.btn-group {
+  display: inline-block;
+  position: relative;
 }

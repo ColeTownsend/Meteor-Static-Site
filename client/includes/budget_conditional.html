@@ -1,16 +1,16 @@
 <template name="budgetConditional">
+  <h6 class="upper normal">Budget</h6>
   {{#if equals budget "$500-$1000"}}
-  {{>emojione ':moneybag:'}}<br>
-  We're going to make something great together.
+
+  We're going to make something great together.<br/> {{>emojione ':moneybag:'}}
   {{/if}}
 
   {{#if equals budget "$1000-$5000"}}
-  {{>emojione ":moneybag:"}}{{>emojione ":moneybag:"}}<br>
-  With this sort of budget, we have a lot of flexibility. Prepare for a home run.
+
+  With this sort of budget, we have a lot of flexibility. Prepare for a home run.<br/>{{>emojione ":moneybag:"}}{{>emojione ":moneybag:"}}
   {{/if}}
 
   {{#if equals budget "$5000+"}}
-  {{>emojione ":moneybag:"}}{{>emojione ":moneybag:"}}{{>emojione ":moneybag:"}} <br>
-  Sky's the limit. Excited to hear more about this!
+  Sky's the limit. I'm excited to hear more about this! <br/> {{>emojione ":moneybag:"}}{{>emojione ":moneybag:"}}{{>emojione ":moneybag:"}}
   {{/if}}
 </template>

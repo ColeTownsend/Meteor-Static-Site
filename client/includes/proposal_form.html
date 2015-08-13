@@ -4,6 +4,7 @@
     <div class="clearfix"></div>
   </section>
   <aside class="column column--duo">
+    {{# unless allFilled }}
     {{ #unless hasData "clientName" }}
     <p>Hi! What's the deal here?</p>
     {{/unless}}
@@ -18,10 +19,10 @@
         {{/unless}}
         {{# if isEmail "clientEmail" }}
           {{#unless hasData "projectType"}}
-            <p>Great! I'll reply to you at {{email}}. What type of project is this?</p>
+            <p>Great! I'll reply to you at <span class="purple link--purple">{{email}}</span>. What type of project is this?</p>
           {{/unless}}
           {{#if hasData "projectType"}}
-            <p><span class="purple">{{project}}</span> projects are always exciting!</p>
+           <p>Great! I'll reply to you at <span class="purple link--purple">{{email}}</span> about your <span class="purple">{{project}}</span> project. Exciting!</p>
             {{#unless hasData "budget"}}
               What's your budget? I can make just about anything work, but we may have to adjust the scope.
             {{/unless}}
@@ -33,8 +34,9 @@
       {{/if}}
     </p>
     {{/if}}
+    {{/unless}}
     {{#if allFilled }}
-      <p class="card green-bg white">This proposal is ready to go if you are. Click on the send button!</p>
+      <p>Hey <span class="purple">{{ name }}</span>, <br/> This proposal is ready to be sent! I'm excited to work with you on your <span class="purple">{{project}}</span> project and I'll keep in mind that the budget is <span class="purple">{{budget}}</span>. I will reply within a few days to <span class="purple">{{email}}</span>. Go ahead and click the Send button!</p>
     {{/if}}
   </aside>
   <article class="column column--duo">
@@ -81,7 +83,10 @@
         <label class="label" for="projectDescription">What's your great idea?</label>
         <textarea class="db" value= {{projectDescription}} name="projectDescription" id="projectDescription"></textarea>
       </div>
-      <input type="submit" id="send-email-button" value="Send" />
+      <input class="btn btn--medium btn--purple" type="submit" id="send-email-button" value="Send" />
+      {{#if isSent }}
+        <span class="bold dib ml">Sent!</span>
+      {{/if}}
     </form>
   </article>
 </template>

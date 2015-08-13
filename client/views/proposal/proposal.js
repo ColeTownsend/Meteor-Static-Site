@@ -18,7 +18,13 @@ Template.proposal_form.helpers({
   },
   isEmail: function(email) {
     var email = Session.get(email);
-    if (_.includes(email, "@") && email.len() > 1) {
+    if (_.contains(email, "@")) {
+      return true
+    }
+  },
+  isSent: function() {
+    var session = Session.get("sentProposal")
+    if (session && session != "") {
       return true
     }
   },
@@ -72,18 +78,24 @@ Template.proposal_form.events({
       if (input && input != "") {
         return true
       }
-    }
+    };
+    var isEmail = function(checker) {
+      if (_.contains(checker, "@")) {
+        return true
+      }
+    };
     if (isFilled(fname) && isFilled(email) && isEmail(email) && isFilled(type) && isFilled(budget) && isFilled(projectDescription)) {
       var email = {
-        to: 'cole@twnsnd.co',
+        to: 'bu03a5b1@robot.zapier.com',
         from: email,
         subject: "Proposal Lead: " + fname + " wants to do " + type + " for " + budget,
         text: "Hey Cole, you have a new freelance lead. " + fname + " wants to do " + type + " for " + budget + ". SUMMARY: " + summary,
       };
       Meteor.call('sendEmail', email.to, email.from, email.subject, email.text);
-      alert("Sending!");
+      Session.set('sentProposal', 1);
     } else {
-      alert("Error!");
+      Session.set('currentProposal', "error");
+      alert("Error!")
       return false;
     }
   }

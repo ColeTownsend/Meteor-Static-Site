@@ -4,6 +4,9 @@ if (Meteor.isClient) {
       return (a === b);
     }
   );
+  Template.registerHelper('session', function(input) {
+    return Session.get(input);
+  });
   Template.listing.helpers({
     isWork: function() {
       var instance = Template.instance();

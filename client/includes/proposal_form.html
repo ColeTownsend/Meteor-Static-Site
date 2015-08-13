@@ -13,23 +13,28 @@
         <p>Now, where can I reach you? Typically I reply in a few days.</p>
       {{/unless}}
       {{#if hasData "clientEmail" }}
-        {{#unless hasData "projectType"}}
-          <p>Great! I have your email. What type of project is this?</p>
+        {{# unless isEmail "clientEmail" }}
+        <p>Bummer, <span class="purple link--purple">{{email}}</span> doesn't look valid.</p>
         {{/unless}}
-        {{#if hasData "projectType"}}
-          <p><span class="purple">{{project}}</span> projects are always exciting!</p>
-          {{#unless hasData "budget"}}
-            What's your budget? I can make just about anything work, but we may have to adjust the scope.
+        {{# if isEmail "clientEmail" }}
+          {{#unless hasData "projectType"}}
+            <p>Great! I'll reply to you at {{email}}. What type of project is this?</p>
           {{/unless}}
-          {{#if hasData "budget"}}
-            {{> budgetConditional budget=budget }}
+          {{#if hasData "projectType"}}
+            <p><span class="purple">{{project}}</span> projects are always exciting!</p>
+            {{#unless hasData "budget"}}
+              What's your budget? I can make just about anything work, but we may have to adjust the scope.
+            {{/unless}}
+            {{#if hasData "budget"}}
+              {{> budgetConditional budget=budget }}
+            {{/if}}
           {{/if}}
         {{/if}}
       {{/if}}
     </p>
     {{/if}}
     {{#if allFilled }}
-    <p class="card green-bg white">This proposal is ready to go if you are. Click on the send button!</p>
+      <p class="card green-bg white">This proposal is ready to go if you are. Click on the send button!</p>
     {{/if}}
   </aside>
   <article class="column column--duo">
@@ -39,7 +44,6 @@
         <input id="clientName" value={{name}} type="text">
       </div>
       <div class="input-group">
-        {{#if isEmail clientEmail }}<small>This looks like an invalid email {{>emojione ':frown:'}}</small>{{/if}}
         <label class="label" for="clientEmail">How can I reach you?</label>
         <input id="clientEmail" value={{email}} type="text">
       </div>
@@ -58,7 +62,7 @@
           <input class="dib" type="checkbox" value="Illustration"> Illustration
         </div>{{!-- if other is checked, show hidden input --}}
         <div class="checkbox">
-          <input class="dib" type="checkbox" value={{otherProject}}> Other
+          <input class="dib" type="checkbox" value= {{otherProject}}> Other
         </div>
       </div>
       <div class="input-group">
@@ -75,9 +79,9 @@
       </div>
       <div class="input-group">
         <label class="label" for="projectDescription">What's your great idea?</label>
-        <textarea class="db" value={{projectDescription}} name="projectDescription" id="projectDescription"></textarea>
+        <textarea class="db" value= {{projectDescription}} name="projectDescription" id="projectDescription"></textarea>
       </div>
-      <input type="submit" id="send-email-button" value="Send"/>
+      <input type="submit" id="send-email-button" value="Send" />
     </form>
   </article>
 </template>

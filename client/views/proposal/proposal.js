@@ -16,15 +16,18 @@ Template.proposal_form.helpers({
       return true;
     }
   },
-  isEmail: function() {
-
-  }
+  isEmail: function(email) {
+    var email = Session.get(email);
+    if (_.includes(email, "@") && email.len() > 1) {
+      return true
+    }
+  },
   name: function() {
     var name = Session.get('clientName');
     return name;
   },
   email: function() {
-    var email = Session.get('email');
+    var email = Session.get('clientEmail');
     return email;
   },
   project: function() {
@@ -70,7 +73,7 @@ Template.proposal_form.events({
         return true
       }
     }
-    if (isFilled(fname) && isFilled(email) && isFilled(type) && isFilled(budget) && isFilled(projectDescription)) {
+    if (isFilled(fname) && isFilled(email) && isEmail(email) && isFilled(type) && isFilled(budget) && isFilled(projectDescription)) {
       var email = {
         to: 'cole@twnsnd.co',
         from: email,

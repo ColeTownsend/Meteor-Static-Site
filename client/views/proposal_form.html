@@ -83,10 +83,11 @@
         <label class="label" for="projectDescription">What's your great idea?</label>
         <textarea class="db" value= {{projectDescription}} name="projectDescription" id="projectDescription"></textarea>
       </div>
+      {{#unless isSent }}
       <input class="btn btn--medium btn--purple" type="submit" id="send-email-button" value="Send" />
-      {{#if isSent }}
-        <span class="bold dib ml">Sent!</span>
-      {{/if}}
+      {{else}}
+      <span class="bold db ml">Sent!</span>
+      {{/unless}}
     </form>
   </article>
 </template>

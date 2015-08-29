@@ -14,6 +14,9 @@ Cole = {
     url: 'http://meeet.co',
   } ],
   clients: [ {
+      name: 'Camayak',
+      url: 'http://camayak.com'
+    },{
       name: 'Panda Network',
       url: 'http://panda.network'
     }, {

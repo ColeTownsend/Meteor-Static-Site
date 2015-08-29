@@ -19,6 +19,21 @@ Template.caseStudy.helpers( {
   }
 } );
 
+Template.caseStudyInfo.helpers({
+  hasCredits: function(credits) {
+    if (this.credits) {
+      return true
+    }
+  },
+  content: function() {
+    var work = WorkList;
+    var currentProject = Session.get( 'current-project' );
+    var project = _.findWhere(work, {template: currentProject} );
+    console.log("This is the project: " + project);
+    return project;
+  }
+});
+
 // populating the global case study template
 Template.globalCaseStudy.helpers( {
   slug: function() {
@@ -38,10 +53,12 @@ Template.globalCaseStudy.helpers( {
   showTitle: function(showTitle) {
     return this.showTitle != "false";
   },
-  hasCredits: function(hasCredits) {
-    return this.credits != "false";
-  },
-} );
+  hasLink: function(link) {
+     if (this.link) {
+      return true
+    }
+  }
+});
 
 // for the specific page the news, make sure there is some meta data
 Template.thenews.rendered = function() {

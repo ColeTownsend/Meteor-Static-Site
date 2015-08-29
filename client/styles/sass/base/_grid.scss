@@ -94,7 +94,7 @@
   }
 
   // colorized
-  &.cyan-bg, &.blush-bg, &.yellow-bg, &.lavender-bg {
+  &.cyan-bg, &.blush-bg, &.yellow-bg {
     h3, p, small {
       color: $bodycolor;
     }
@@ -106,7 +106,7 @@
       opacity: .5;
     }
   }
-  &.navy-bg, &.indigo-bg, &.green-bg, &.cosmic-bg, &.pink-bg  {
+  &.navy-bg, &.indigo-bg, &.green-bg, &.cosmic-bg, &.pink-bg, &.lavender-bg  {
     h3, p, h6 {
       color: $white;
     }

@@ -12,7 +12,6 @@ Template.proposal_form.helpers({
   },
   allFilled: function() {
     if (Session.get('clientName') && Session.get('clientEmail') && Session.get('projectType') && Session.get('budget') && Session.get('projectDescription')) {
-      console.log("Truth")
       return true;
     }
   },

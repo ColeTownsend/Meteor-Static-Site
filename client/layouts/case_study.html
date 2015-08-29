@@ -11,30 +11,11 @@
         {{/if}}
       {{/with}}
     </div>
-    <div class="hero-img" style="background-image: url('../images/work/{{ content.bg}}');"></div>
+    <div class="hero-img" style="background-image: url('../images/work/{{ content.bg }}');"></div>
   </header>
   <main class="white-bg" id="baseline">
-    <section class="section typeset">
-      <div class="column column--sidebar">
-        <p>
-          <small class="upper regular cadet-blue">Client</small>
-          <br>{{content.client}}
-          <br>
-          <small class="upper regular cadet-blue">Challenge</small>
-          <br>{{content.challenge}}
-        </p>
-        {{#if hasCredits}}
-          <span class="caption small-caps upper">Extra Credit and Thanks</span>
-          <p>{{ content.credits }}</p>
-        {{/if}}
-      </div>
-      <div class="column column--main">
-        <p>{{> yield "intro"}}</p>
-      </div>
-      {{> yield }}
-    </section>
+    {{> yield }}
   </main>
-  <!--   {{> postFooter }} -->
   <footer role="main-footer" class="flex-parent fp--row fp--fill-space">
     <hr class="hr--narrow">
     <span class="flex-child fc--center">© <small>Cole Townsend in 🇺🇸 </small></span>

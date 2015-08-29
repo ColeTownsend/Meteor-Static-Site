@@ -1,0 +1,21 @@
+<template name="caseStudyInfo">
+<div class="column column--sidebar">
+  <p>
+    <small class="upper regular cadet-blue">Client</small>
+    <br/>{{content.client}}
+    <br/>
+    <small class="upper regular cadet-blue">Challenge</small>
+    <br>{{content.challenge}}
+    <br/>
+    {{#if hasLink}}
+      <small class="upper regular cadet-blue">Live</small>
+      <br/>
+      <a target="_blank" href="{{content.link}}">{{content.link}}</a>
+    {{/if}}
+    {{#if hasCredits}}
+      <br/>
+      <span class="caption small-caps upper">Extra Credit and Thanks</span> {{ content.credits }}
+    {{/if}}
+  </p>
+</div>
+</template>

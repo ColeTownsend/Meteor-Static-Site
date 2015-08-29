@@ -21,7 +21,7 @@ if (Meteor.isClient) {
   });
 
   Template.workGrid.helpers({
-    projects: WorkList
+    projects: WorkList,
   });
 
   Template.listing.rendered = function() {

@@ -57,17 +57,17 @@ $gutterwidths: (
 // Add weight and style details too.
 // ! Set cap height to set to the baseline.
 $bodytype: (
-  font-family: 'NittiGrotesk-Semilight, Myriad Pro, Avenir, Arial, sans-serif',
-  regular: 300,
-  bold: 600,
-  italic: italic,
+  font-family: 'Nitti Grotesk Semilight, Avenir, Arial, sans-serif',
+  regular: normal,
+  bold: 400,
+  italic: normal,
   cap-height: 0.66
 );
 
 $headingtype: (
-  font-family: 'Nitti Grotesk, Myriad Pro, Avenir, Arial, sans-serif',
-  regular: 200,
-  bold: 500,
+  font-family: 'Nitti Grotesk, Avenir, Arial, sans-serif',
+  regular: normal,
+  bold: normal,
   cap-height: 0.66
 );
 

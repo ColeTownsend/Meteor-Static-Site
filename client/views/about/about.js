@@ -20,9 +20,6 @@ Cole = {
       name: 'Panda Network',
       url: 'http://panda.network'
     }, {
-      name: 'Goodrich Coffee Bar',
-      url: 'http://williams.edu'
-    }, {
       name: 'Meta',
       url: 'http://meta.sc'
     }, {

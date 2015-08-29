@@ -4,6 +4,13 @@ if (Meteor.isClient) {
       return (a === b);
     }
   );
+   Template.registerHelper('exists',
+    function(a) {
+      if (a) {
+        return true;
+      }
+    }
+  );
   Template.registerHelper('session', function(input) {
     return Session.get(input);
   });

@@ -1,23 +1,23 @@
 // anything that uses case study data
 
-Template.listing.helpers( {
-  isPublished: function( published ) {
+Template.listing.helpers({
+  isPublished: function(published) {
     return this.published === published;
   }
-} );
+});
 
-Template.workGrid.helpers( {
-  isPublished: function( published ) {
+Template.workGrid.helpers({
+  isPublished: function(published) {
     return this.published === published;
   }
-} );
+});
 
-Template.caseStudy.helpers( {
+Template.caseStudy.helpers({
   getTemplateName: function() {
     var slug = Router.current().params.slug;
     return slug;
   }
-} );
+});
 
 Template.caseStudyInfo.helpers({
   hasCredits: function(credits) {
@@ -27,23 +27,30 @@ Template.caseStudyInfo.helpers({
   },
   content: function() {
     var work = WorkList;
-    var currentProject = Session.get( 'current-project' );
-    var project = _.findWhere(work, {template: currentProject} );
+    var currentProject = Session.get('current-project');
+    var project = _.findWhere(work, {
+      template: currentProject
+    });
     console.log("This is the project: " + project);
     return project;
+  },
+  hasLink: function() {
+    return true
   }
 });
 
 // populating the global case study template
-Template.globalCaseStudy.helpers( {
+Template.globalCaseStudy.helpers({
   slug: function() {
     var slug = Router.current().params.slug;
     return slug;
   },
   content: function() {
     var work = WorkList;
-    var currentProject = Session.get( 'current-project' );
-    var project = _.findWhere(work, {template: currentProject} );
+    var currentProject = Session.get('current-project');
+    var project = _.findWhere(work, {
+      template: currentProject
+    });
     console.log("This is the project: " + project);
     return project;
   },
@@ -52,21 +59,16 @@ Template.globalCaseStudy.helpers( {
   },
   showTitle: function(showTitle) {
     return this.showTitle != "false";
-  },
-  hasLink: function(link) {
-     if (this.link) {
-      return true
-    }
   }
 });
 
 // for the specific page the news, make sure there is some meta data
 Template.thenews.rendered = function() {
   function itunesMeta() {
-    var meta = document.createElement( 'meta' );
+    var meta = document.createElement('meta');
     meta.name = "apple-itunes-app"
     meta.content = "app-id=884790249";
-    document.getElementsByTagName( 'head' )[ 0 ].appendChild( meta );
+    document.getElementsByTagName('head')[0].appendChild(meta);
   };
   itunesMeta();
 };

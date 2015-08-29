@@ -1,6 +1,6 @@
-<template name="meta-lander">
+<template name="meta-landing-page">
 <section class="section typeset">
-{{ >caseStudyInfo  }}
+{{ >caseStudyInfo link=content.link  }}
 <article class="column column--main">
 {{#markdown}}
 # What is Meta?
@@ -27,22 +27,44 @@ While the team really really liked the old Robinhood.io site concept,  we decide
 
 Jason and I spent a lot of time in conversation, working to crystallize exactly what we were looking for in the launch page. The ultimate goal was maximizing sign ups. Jason told me that their sign ups increased after adding a demo video to their site. Watching the demo video, I realized why. It wasn't for entertainment value. The demo that shows exactly how the app works. What I found to be problematic with the old landing page, and often see on newer app pages, is that I'm not really sure what the product is. Without captioned screenshots, demos, or explicit copywriting I feel left in the dark. In the absence of proficient explanation on the original site, the demo offered visitors what they wanted to know, and boosted sign up conversions.
 
-**comparison of old and new page** full image
+{{/markdown}}
+</article>
+</section>
+<div class="full-width">
+{{>studyVideo video="meta-animation.mp4" bg="meta-video-poster.png"}}
+</div>
+<section class="section typeset no-pad">
+<article class="column column--right">
 
-Based on research I had done on landing pages, breakdowns of the competitor sites, and the little analytics we had, it was important that we focused on making information about Meta easy to understand. Meta is a search engine for your cloud apps, it's wicked fast, and you can open documents right from there. The solution to this was copywriting accompanied by illustrated features of the app. Without a fully polished product to show, I felt that illustrations were the best substitute — they're flexible without being misleading.
+{{#markdown}}
 
-**illo 1, 2, 3** full image
+Based on research I had done on landing pages, breakdowns of the competitor sites, and the little analytics we had, we thought it was important to make information about Meta prevalent and easy to understand. Meta is a search engine for your cloud apps, it's wicked fast, and you can open documents right from there. The solution to this problem was easy. We needed great copywriting accompanied by illustrated features of the app. Without a fully polished product to show, I felt that illustrations were the best substitute — they're flexible without being misleading.
+{{/markdown}}
+</article>
+</section>
 
-We focused the layout of the page to reinforce the sign up forms, a bold call to action followed by a form. To quickly show how the app worked, I build an animation in Framer, then VelocityJS, a superfast javascript animation library. While an abstraction of the actuall appearance of the app, it works exactly how the current beta works and future product will work. Meta provides live updating, instantaneous results, across all cloud apps. Above the fold of the page, the site provides visitors with all the information they need to know before signing up. What's more, is that there's a link to an app demo proving that the app actually exists.
+<section class="section typeset no-pad">
+<aside class="column column--sidebar">
+  {{>studyImage low="meta-animation-old.gif" caption="Initial animation prototypes"}}
+</aside>
+<article class="column column--main">
+{{#markdown}}
+We focused the layout of the page to reinforce the sign up forms. I place the standard, bold call to action followed by a form. To succinctly show how the app worked, I build an animation in Framer, then VelocityJS, a superfast javascript animation library. While an abstraction of the actuall appearance of the app, it works exactly how the current beta works and future product will work.
 
-To summarize, we accomplished half a dozen things within the first 700 or so pixels. We establish our offering: "Access any file instantly wherever it is," a secondary heading to further elaborate, a form, and a link. Beside the copywriting, there is an animated illustration that shows precisely how this previously impossible feat is executed.
+To summarize, we accomplished half a dozen things within the first 700 or so pixels. We established our offering: "Access any file instantly wherever it is," placed a secondary heading to further elaborate, a form, and a link. Beside the copywriting, there is an animated illustration that shows precisely how you can juggle 4 different cloud storage drives.
+{{/markdown }}
+</article>
+</section>
 
-**illustration full width**
+<section class="section typeset no-pad">
 
+  <aside class="column column--sidebar">
+  {{> studyImage low="meta-copy-unit.png" hi="meta-copy-unit@2x.png" height="10rem" caption="The main copywriting block"}}</aside>
+  <article class="column column--main">
+
+{{#markdown}}
 ### Navigating the copy
 If the above-the-fold content wasn't enough, a teasing illustration of some ruffled documents hint at a lower area to the page. I focused on writing quick, skimmable headers with the help of the team, carefully melding illustration and content for a visually balanced page. Each illustration was designed specifically for that bit of content, and designed to fit around both its twin paragraph and the entire page.
-
-**Copy unit sidebar**
 
 ### Endcap Video
 To cap off the copy, I made a seperate module for the video. This serves two purposes. First, it shows a screenshot of the actual app. Which means it's real. Second, the single unit dedicated to the video will hopefully increase the likelihood that visitors watch the video and therefore sign up. With the current analytics, we cannot confirm  if the increased conversion noted previously was causation or coincidence. To cover our bases, I made a dedicated portion just for the video.
@@ -52,7 +74,7 @@ While speccing designs is everyones favorite, I offered to code the landing page
 
 The site I build is responsive for mobile, tablet, and desktop and was optimized for peak performance with gulp.
 
-My CSSstats were pretty good for a completely custom built site, at 4kb gzipped. The site scored quite highly on Pagespeed as well, with the greatest loss of pagespeed from the large amount of http requests due to images and external libraries.
+My [CSSstats]() were pretty good for a completely custom built site, at 4kb gzipped. The site scored quite highly on Pagespeed as well, with the greatest loss of pagespeed from the large amount of http requests due to images and external libraries.
 {{/markdown}}
 </article>
 </section>

@@ -133,6 +133,11 @@
 
 // Sidebar.
 .column--sidebar {
+  img {
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    width: auto;
+    margin: 0 auto;
+  }
   @include breakpoint(break-1) {
     padding-right: map-get($gutterwidths, medium);
     @include ideal-measure(1, small, false);

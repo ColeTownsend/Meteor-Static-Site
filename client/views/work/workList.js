@@ -16,7 +16,7 @@ WorkList = [{
 }, {
   title: 'Meta Landing Page',
   client: 'Meta',
-  template: "meta-lander",
+  template: "meta-landing-page",
   showTitle: "false",
   type: 'Web Design & Development',
   date: '08 2015',

@@ -45,16 +45,6 @@ main.section {
   margin-bottom: 6rem;
 }
 
-.dark-mode {
-  background: map-get($accentcolors, navy);
-  nav a, a {
-    $yellow: map-get($accentcolors, yellow);
-    color: $yellow !important;
-  }
-  .cta {
-    color: map-get($accentcolors, salmon) !important;
-  }
-}
 footer[role="main-footer"] {
   width: 100%;
   text-align: center;

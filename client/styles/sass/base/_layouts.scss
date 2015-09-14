@@ -51,7 +51,9 @@
   }
   &.no-pad {
     position: relative;
-    left: -2rem;
+    @include breakpoint(break-3) {
+      left: -2rem;
+    }
   }
 }
 

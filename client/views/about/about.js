@@ -1,6 +1,6 @@
 Cole = {
   name: 'Cole Townsend',
-  status: 'Redesigning my portfolio, again',
+  status: 'Refactoring and coding my portfolio',
   college: 'Williams College',
   major: 'Art History',
   graduation: '15',

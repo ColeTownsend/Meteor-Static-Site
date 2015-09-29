@@ -26,7 +26,7 @@ WorkList = [{
   info: 'Save everyone 4 hours a week',
   challenge: 'Create and code an engaging and high converting landing page for Meta Search.',
   logo: 'false',
-  link: 'meta.sc',
+  link: 'www.meta.sc',
   bg: "meta-lander-bg@2x.png",
   thumbFile: 'gif',
   credits: "false"

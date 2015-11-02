@@ -1,0 +1,15 @@
+{
+  "name": "portfolio",
+  "homepage": "https://github.com/ColeTownsend/Meteor-Static-Site",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.6"
+  }
+}

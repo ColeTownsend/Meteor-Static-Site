@@ -23,7 +23,8 @@ Cole = {
       name: 'Meta',
       url: 'http://meta.sc'
     }, {
-      name: 'Seth Pietras'
+      name: 'Seth Thomas Pietras',
+      url: 'http://mediastopheles.com'
     }
   ]
 }

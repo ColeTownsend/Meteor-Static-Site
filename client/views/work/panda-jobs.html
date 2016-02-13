@@ -1,24 +1,19 @@
 <template name="panda-jobs">
-{{#contentFor "title"}}Startup Launch List{{/contentFor}}
-
-{{#contentFor "client"}}Panda Network{{/contentFor}}
-
-{{#contentFor "challenge"}}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint fugiat sapiente, optio illo natus. Similique vero doloribus id sapiente cupiditate!
-{{/contentFor}}
-
-{{#contentFor "intro"}}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis incidunt earum ipsam sit maxime officia non iure nisi. Excepturi ducimus, quas, temporibus veritatis amet corrupti fugiat. Doloribus earum suscipit dolor, expedita, pariatur blanditiis recusandae quaerat porro labore eum fugit quisquam soluta? Voluptatibus eveniet culpa expedita mollitia, nobis nulla! Enim, doloribus.
-{{/contentFor}}
-
-{{#contentFor "credits"}}
-Thank you to Tosin Afolabi for making implementing my design a breeze.
-{{/contentFor}}
-
-<article class="column column--main column--right">
+<section class="section typeset">
+{{ >caseStudyInfo  }}
+<article class="column column--main">
 {{#markdown}}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti fugit optio consectetur possimus ullam id nesciunt alias rerum magni, inventore! Unde blanditiis rem esse commodi fuga fugiat itaque quasi soluta. Eius delectus deleniti ab temporibus mollitia modi aliquid nobis facere et dignissimos, dolore amet, asperiores at culpa illum adipisci illo provident est, vel maiores molestias ut! Earum vitae reprehenderit error cumque maiores eaque alias non quas recusandae distinctio magni, omnis, blanditiis ex. Error, officia assumenda quidem delectus esse aut maiores libero inventore sapiente deserunt vitae officiis molestiae, accusamus? Exercitationem molestiae veritatis laborum minima voluptate doloribus ipsam. Dolorum modi, ut ea!
+Panda Jobs is the latest addition to a suite of websites and online services maintained by the Panda team. It's intended to be a fresh take on job boards by focusing on perks and connecting companies with a community of designers. It also provides a dashboard for job post metrics enabling customers to see how effective their postings have been
 {{/markdown}}
 </article>
+</section>
+<section class="typeset section no-pad">
+<article class="column column--right">
+{{#markdown}}
+Further write up coming soon!
+{{/markdown}}
+</article>
+</section>
+<img srcset="{{ urlFor 'home'}}/images/work/panda-job-stats.png 1x, {{ urlFor 'home'}}/images/work/panda-job-stats.png 2x" alt="Stats Dashboard for Panda jobs">
 
 </template>

@@ -42,9 +42,9 @@ WorkList = [{
   info: 'Make Finding a Better Job, Better',
   challenge: 'Help job seekers find the job they love most.',
   template: "panda-jobs",
-  link: "false",
+  link: "http://panda.jobs",
   logo: 'panda',
-  credits: "false"
+  credits: "Noah Buscher for implementing"
 }, {
   title: 'Startup Book List',
   titleColor: 'white',

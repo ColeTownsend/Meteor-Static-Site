@@ -1,9 +1,5 @@
-meteor-static-blog
-==================
+# gatsby-starter-blog
+Gatsby starter for creating a blog
 
-Static Blog Made with Meteor 
-
-* Demo: http://static-blog.meteor.com/
-* Article: [Building Static Websites with Meteor](http://meteorhacks.com/building-static-websites-with-meteor.html)
-
-![Building Static Websites with Meteor](https://i.cloudup.com/jpAwF9ua6J.png)
+Install this starter (assuming Gatsby is installed) by running from your CLI:
+`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`

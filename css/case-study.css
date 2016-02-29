@@ -1,0 +1,55 @@
+.app-inner {
+  margin: 0;
+  width: 100%;
+}
+
+nav {
+  margin-bottom: 40px;
+}
+
+/*case study*/
+.case-study {
+  max-width: 630px;
+  margin: 0 auto;
+}
+
+.case-study p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 60px;
+}
+
+.case-study-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 480px;
+  width: 100%;
+  background-repeat: none;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.mask {
+  width: 105%;
+  position: absolute;
+  bottom: -60px;
+  left: -2.5%;
+}
+
+.case-study-next-item p {
+  font-size: 1rem;
+}
+
+.post-body {
+  margin-top: 440px;
+}
+
+.primary-title,
+.secondary-title {
+  position: absolute;
+  bottom: -20px;
+  left: 20%;
+  font-weight: 500;
+}

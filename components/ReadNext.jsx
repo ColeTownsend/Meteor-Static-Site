@@ -25,32 +25,20 @@ export default class extends React.Component {
       body = prune(html.replace(/<[^>]*>/g, ''), 200);
 
       return (
-        <div>
-          <h6
-            style={{
-              margin: 0,
-              fontSize: fontSizeToMS(-1).fontSize,
-              lineHeight: fontSizeToMS(-1).lineHeight,
-              letterSpacing: -0.5
-            }}
-          >
-            READ THIS NEXT:
-          </h6>
-          <h3
-            style={{
-              marginBottom: rhythm(1/4)
-            }}
-          >
-            <Link
-              to={nextPost.path}
-              query={{readNext: true}}
-            >
-              {nextPost.data.title}
-            </Link>
-          </h3>
+        <Link
+          to={nextPost.path}
+          query={{readNext: true}}
+          className='case-study-next-item'
+        >
+          <div className="banner">
+            <span className="line"></span>
+            <h4>Next Up</h4>
+            <span className="line"></span>
+          </div>
+
+          <h2>{nextPost.data.title}</h2>
           <p>{body}</p>
-          <hr />
-        </div>
+        </Link>
       );
     }
   }

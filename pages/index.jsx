@@ -26,14 +26,14 @@ export default class extends React.Component {
 
       if (page.path && page.path !== "/" && !((ref2 = page.data) != null ? ref2.draft : void 0)) {
         workCards.push(
-          <a href='#' className='work-card' key={page.path}>
+          <Link to={link(page.path)} className='work-card' key={page.path}>
             <div className='work-meta'>
               <h3>{title}</h3>
               <p>{description}</p>
             </div>
             <span className="top-layer"></span>
             <span className="image-layer"><img src="./panda-jobs.png" alt=""/></span>
-          </a>
+          </Link>
         );
       }
     }

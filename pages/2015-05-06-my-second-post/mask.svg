@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1154px" height="159px" viewBox="0 0 1154 159" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0,98 L1223.61328,0.327148438 L1223.61328,158.75 L0,158.75 L0,98 Z"></path>
+    </defs>
+    <g id="Portfolio-Layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Dribbble" sketch:type="MSArtboardGroup" transform="translate(-311.000000, -327.000000)">
+            <g id="Unfortunately,-that--+-Quick-Zephyrs-Blow" sketch:type="MSLayerGroup" transform="translate(240.500000, 327.000000)">
+                <mask id="mask-2" sketch:name="Mask" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#EDF9FD" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,5 +1,6 @@
 ---
 title: My Second Post!
+type: 'Web design and front end development'
 date: "2015-05-06T23:46:37.121Z"
 layout: post
 readNext: "/hi-folks/"

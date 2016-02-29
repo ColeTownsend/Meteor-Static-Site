@@ -1,5 +1,6 @@
 ---
 title: New Beginnings
+type: 'Web design and front end development'
 date: "2015-05-28T22:40:32.169Z"
 layout: post
 readNext: "/hosting-static-sites-with-docker-and-nginx/"

@@ -11,9 +11,10 @@ export default class extends React.Component {
       yo: true
     }
   }
+
   render() {
-    let i, len, page, pageLinks, ref, ref1, ref2, title;
-    pageLinks = [];
+    let i, len, page, workCards, ref, ref1, ref2, title, description;
+    workCards = [];
     ref = sortBy(this.props.pages, (page) => {
       let ref;
       return (ref = page.data) != null ? ref.date : void 0;
@@ -21,19 +22,22 @@ export default class extends React.Component {
     for (i = 0, len = ref.length; i < len; i++) {
       page = ref[i];
       title = ((ref1 = page.data) != null ? ref1.title : void 0) || page.path;
+      description = "Web design and front end development";
+
       if (page.path && page.path !== "/" && !((ref2 = page.data) != null ? ref2.draft : void 0)) {
-        pageLinks.push(
-          <li
-            key={page.path}
-            style={{
-              marginBottom: rhythm(1/4)
-            }}
-          >
-            <Link to={link(page.path)}>{title}</Link>
-          </li>
+        workCards.push(
+          <a href='#' className='work-card' key={page.path}>
+            <div className='work-meta'>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </div>
+            <span className="top-layer"></span>
+            <span className="image-layer"><img src="./panda-jobs.png" alt=""/></span>
+          </a>
         );
       }
     }
+
     return (
       <DocumentTitle title={this.props.config.blogTitle}>
         <article>
@@ -52,10 +56,8 @@ export default class extends React.Component {
               <h4>Latest Work</h4>
               <span className="line"></span>
             </div>
+            {workCards}
           </section>
-          <ul>
-            {pageLinks}
-          </ul>
         </article>
       </DocumentTitle>
     )

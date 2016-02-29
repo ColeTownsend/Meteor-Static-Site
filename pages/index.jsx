@@ -36,28 +36,27 @@ export default class extends React.Component {
     }
     return (
       <DocumentTitle title={this.props.config.blogTitle}>
-        <div>
-          <p
-            style={{
-              marginBottom: rhythm(2.5)
-            }}
-          >
-            <img
-              src="./kyle-round-small-pantheon.jpg"
-              style={{
-                float: 'left',
-                marginRight: rhythm(1/4),
-                marginBottom: 0,
-                width: rhythm(2),
-                height: rhythm(2)
-              }}
-            />
-            Written by <strong>{this.props.config.authorName}</strong> who lives and works in San Francisco building useful things. <a href="https://twitter.com/kylemathews">You should follow him on Twitter</a>
-          </p>
+        <article>
+          <span className="next-work-left">
+            <a href='#'>Panda Jobs</a>
+          </span>
+          <span className="next-work-right">
+            <a href='#'>Panda Jobs</a>
+          </span>
+          <section className='intro'>
+            <h3>{this.props.config.intro}</h3>
+          </section>
+          <section className="works">
+            <div className="banner">
+              <span className="line"></span>
+              <h4>Latest Work</h4>
+              <span className="line"></span>
+            </div>
+          </section>
           <ul>
             {pageLinks}
           </ul>
-        </div>
+        </article>
       </DocumentTitle>
     )
   }

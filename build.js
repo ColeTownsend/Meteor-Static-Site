@@ -69,22 +69,48 @@ var reactTemplate = require( 'metalsmith-react-templates' );
 var browserify = require( 'browserify' );
 var babelify = require( 'babelify' );
 var fs = require( 'fs' );
+var collections = require( 'metalsmith-collections' );
+var cleanCSS = require( 'metalsmith-clean-css' );
+var permalinks = require( 'metalsmith-permalinks' );
+var browserSync = require( 'metalsmith-browser-sync' );
+var sass = require('metalsmith-sass');
+
+// var m = Metalsmith.metadata();
+// console.log(m.collections);
+// var gzip = require( 'metalsmith-gzip' );
 
 new Metalsmith( __dirname )
   .source( './src' )
   .clean( true )
+  .use(collections({
+    journals: {
+      pattern: 'src/journals/*.md',
+      sortBy: 'date',
+      reverse: true
+    },
+    works: {
+      pattern: 'src/works/*.md',
+      sortBy: 'date',
+      reverse: true
+    }
+  }))
   .use( reactTemplate( {
     babel: true,
     directory: 'templates',
     baseFile: 'base.html',
     isStatic: false
-  } ) )
+  }))
+  .use(permalinks({
+    pattern: './:collection/:title'
+  }))
+  .use(sass({
+    outputStyle: 'compressed'
+  }))
   .destination( './build' )
   .build( function ( err ) {
     if ( err ) {
       throw err;
     }
-
     browserify( {
         debug: true
       } )

@@ -3,7 +3,6 @@ import { RouteHandler, Link } from 'react-router';
 import sortBy from 'lodash/collection/sortBy';
 import DocumentTitle from 'react-document-title';
 import { link } from 'gatsby-helpers';
-import { rhythm, fontSizeToMS } from 'utils/typography'
 
 export default class extends React.Component {
   static data() {

@@ -1,18 +1,26 @@
 import React from 'react';
 import { RouteHandler, Link } from 'react-router';
 import { link } from 'gatsby-helpers';
-import { rhythm, fontSizeToMS } from 'utils/typography'
+import bliss from 'blissfuljs';
+
 
 import '../css/styles.css';
 
 export default class extends React.Component {
+  getInitialState() {
+    return {
+      mode: 'day',
+      project: 'panda-jobs'
+    };
+  }
+
   render() {
     let header;
     header = (
       <nav>
         <span className="link-group">
           <Link to={link('/')}>Work</Link>
-          <Link to={link('/')}>About</Link>
+          <Link to={link('/about/')}>About</Link>
         </span>
 
         <Link to={link('/')}>Twnsnd Co</Link>

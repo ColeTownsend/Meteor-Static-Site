@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import { prune, include as includes } from 'underscore.string';
 import find from 'lodash/collection/find';
-import { rhythm, fontSizeToMS } from 'utils/typography'
 import { link } from 'gatsby-helpers'
 
 export default class extends React.Component {

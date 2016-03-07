@@ -1,6 +1,6 @@
 .app-inner {
-  margin: 0;
-  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 0;
 }
 
 nav {
@@ -14,8 +14,8 @@ nav {
 }
 
 .case-study p {
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.8;
   margin-bottom: 60px;
 }
 

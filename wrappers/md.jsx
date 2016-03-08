@@ -4,7 +4,6 @@ import { link } from 'gatsby-helpers';
 import ReadNext from '../components/ReadNext';
 
 import '../css/zenburn.css';
-import '../css/case-study.css';
 
 module.exports = React.createClass({
 

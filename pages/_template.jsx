@@ -3,9 +3,6 @@ import { RouteHandler, Link } from 'react-router';
 import { link } from 'gatsby-helpers';
 import bliss from 'blissfuljs';
 
-
-import '../css/styles.css';
-
 export default class extends React.Component {
   getInitialState() {
     return {

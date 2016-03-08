@@ -10,6 +10,11 @@ export default class Html extends React.Component {
       title = this.props.title;
     }
 
+    let cssLink
+    if (process.env.NODE_ENV === 'production') {
+      cssLink = <link rel="stylesheet" href={link('/app.css')} />
+    }
+
     return (
       <html lang="en">
         <head>
@@ -18,7 +23,7 @@ export default class Html extends React.Component {
           <meta name='viewport' content='user-scalable=no width=device-width, initial-scale=1.0 maximum-scale=1.0'/>
           <title>{this.props.title}</title>
           <link rel="shortcut icon" href={this.props.favicon}/>
-          <link ref='stylesheet' href='./styles.css'/>
+          {cssLink}
           <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Latin+Modern+Mono:400/Roboto:300,400,500" />
         </head>
         <body>

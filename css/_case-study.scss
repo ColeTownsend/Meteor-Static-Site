@@ -1,0 +1,75 @@
+nav {
+  margin-bottom: 40px;
+}
+
+/*case study*/
+.case-study {
+  max-width: 630px;
+  margin: 0 auto;
+
+  p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 60px;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.case-study-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 480px;
+  width: 100%;
+  background-repeat: none;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.mask {
+  width: 105%;
+  position: absolute;
+  bottom: -60px;
+  left: -2.5%;
+}
+
+.case-study-next-item {
+  h1,
+  h2,
+  h3,
+  a {
+    color: inherit;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+.post-body {
+  margin-top: 440px;
+}
+
+.primary-title,
+.secondary-title {
+  position: absolute;
+  bottom: -20px;
+  left: 20%;
+  font-weight: 500;
+}
+
+.panda-jobs {
+  background-color: #EDF9FD;
+  color: #6B36E3;
+
+  .case-study-next-item {
+    color: #6B36E3;
+
+    .line {
+      background-color: #6B36E3;
+    }
+  }
+}

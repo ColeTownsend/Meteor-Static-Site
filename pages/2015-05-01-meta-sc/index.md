@@ -1,9 +1,15 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
+title: Panda Jobs
+pageName: panda-jobs
+type: 'Web design and front end development'
+date: "2015-05-06T23:46:37.121Z"
 layout: post
-readNext: "/my-second-post/"
-path: "/hello-world/"
+readNext: "/hi-folks/"
+path: "/meta-landing-page/"
+accentColor: "#68ced0"
+backgroundColor: "#f9f9f9"
+backgroundImage: "meta-bg.png"
+mask: "mask-alt.svg"
 ---
 
 This is my first post on my new fake blog! How exciting!

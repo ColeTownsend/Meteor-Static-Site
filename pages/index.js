@@ -16,16 +16,17 @@ class BlogIndex extends React.Component {
     sortedPages.forEach((page) => {
       if (access(page, 'file.ext') === 'md') {
         const title = access(page, 'data.title') || page.path
-        const description = access(page, 'data.description') || page.path
+        const type = access(page, 'data.type')
+        const backgroundImage = "." + page.path + access(page, 'data.backgroundImage')
         pageLinks.push(
           <Link to={link(page.path)} className="work-card" key={page.path}>
             <div className="work-meta">
               <h3>{title}</h3>
-              <p>{description}</p>
+              <p>{type}</p>
             </div>
             <span className="top-layer"></span>
             <span className="image-layer">
-              <img src="./panda-jobs.png" alt=""/>
+              <img src={backgroundImage} alt=""/>
             </span>
           </Link>
         )
@@ -35,10 +36,14 @@ class BlogIndex extends React.Component {
       <DocumentTitle title={config.blogTitle}>
         <article>
           <span className="next-work-left">
-            <a href="#">Panda Jobs</a>
+            <Link to={link("/panda-jobs/")}>
+              <span>Panda</span> <span>Jobs</span>
+            </Link>
           </span>
           <span className="next-work-right">
-            <a href="#">Panda Jobs</a>
+            <Link to={link("/panda-jobs/")}>
+              <span>Panda</span> <span>Jobs</span>
+            </Link>
           </span>
           <section className="intro">
             <h3>{config.intro}</h3>

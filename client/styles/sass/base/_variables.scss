@@ -16,11 +16,11 @@ $breakpoints: (
 // Root font-sizes for each breakpoint. Set to half desired line-height of body text.
 // ! Make sure to have as many sizes as breakpoints above.
 $rootsizes: (
-  rootsize-0: 12,   // 24px line-height body text
-  rootsize-1: 14,   // 28px line-height body text
-  rootsize-2: 15,   // 30px line-height body text
-  rootsize-3: 17,   // 34px line-height body text
-  rootsize-4: 19    // 38px line-height body text
+  rootsize-0: 10,   // 24px line-height body text
+  rootsize-1: 12,   // 28px line-height body text
+  rootsize-2: 13,   // 30px line-height body text
+  rootsize-3: 15,   // 34px line-height body text
+  rootsize-4: 17    // 38px line-height body text
 );
 
 // Set the optimum line-length for your text (based on typeface).
@@ -57,7 +57,7 @@ $gutterwidths: (
 // Add weight and style details too.
 // ! Set cap height to set to the baseline.
 $bodytype: (
-  font-family: 'Nitti Grotesk Semilight, Avenir, Arial, sans-serif',
+  font-family: 'SF UI Text, system, -apple-system, BlinkMacSystemFont, Avenir Next, Helvetica Neue, Lucida Grande, sans-serif',
   regular: normal,
   bold: 400,
   italic: normal,
@@ -65,7 +65,8 @@ $bodytype: (
 );
 
 $headingtype: (
-  font-family: 'Nitti Grotesk, Avenir, Arial, sans-serif',
+  font-family: 'SF UI Text, system, -apple-system, BlinkMacSystemFont, Avenir Next, Helvetica Neue, Lucida Grande, sans-serif',
+  lighter: 300,
   regular: normal,
   bold: normal,
   cap-height: 0.66

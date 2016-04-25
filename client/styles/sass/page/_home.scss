@@ -11,12 +11,14 @@
   position: relative;
   width: min-instrinsic;
   z-index: 100;
+}
 
+.cta {
   p {
     position: relative;
     z-index: 100;
     font-weight: 300;
-    line-height: 3rem;
+    line-height: 2.4rem !important;
   }
 }
 
@@ -31,6 +33,7 @@
   color: #222222;
   text-decoration: none;
   z-index: -1;
+
   @include breakpoint(break-2) {
     @include maxwidth(3);
     display: block;

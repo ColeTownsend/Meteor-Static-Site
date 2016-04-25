@@ -35,7 +35,7 @@ nav[role="navigation"] {
   //   }
   // }
   a {
-    font-family: unquote(map-get($headingtype, font-family));
+    // font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
     @include fontsize(14, 0);
     @include user-select();

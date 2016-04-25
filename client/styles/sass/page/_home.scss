@@ -11,9 +11,11 @@
   position: relative;
   width: min-instrinsic;
   z-index: 100;
+
   p {
     position: relative;
     z-index: 100;
+    font-weight: 300;
     line-height: 3rem;
   }
 }

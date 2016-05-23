@@ -68,7 +68,8 @@ a {
   font-weight: 200;
 }
 
-.mono {
+.mono,
+.typeset .mono {
   font-family: unquote(map-get($monospacetype, font-family));
 }
 
@@ -193,6 +194,7 @@ a {
   h6,
   .zeta {
     @include sassline(zeta, $headingtype, 2, 0, all);
+    font-weight: normal;
   }
   // Heading level 7.
   .eta {

@@ -33,7 +33,7 @@
 
   // Configure environment
   "env": {
-    "ROOT_URL": "http://twnsnd.co",
+    "ROOT_URL": "http://v4.twnsnd.co",
     "PORT": 3001
   },
 
